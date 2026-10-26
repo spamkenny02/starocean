@@ -1,0 +1,44 @@
+diff --git a/dma.cpp b/dma.cpp
+index e1ad324..a4fd40f 100644
+--- a/dma.cpp
++++ b/dma.cpp
+@@ -122,6 +122,18 @@ bool8 S9xDoDMA (uint8 Channel)
+ 	if (count == 0)
+ 		count = 0x10000;
+ 
++
++    if (!Settings.SDD1 && Channel == 0 && Registers.PBPC == 0x64805f) {
++        static FILE *plain_file = NULL; static bool plain_init = false;
++        if (!plain_init) { plain_init = true; const char *path = getenv("SO_PLAIN_TRACE"); if (path) plain_file = fopen(path, "w"); }
++        if (plain_file) { unsigned int hash = 2166136261u;
++            for (int j = 0; j < count; ++j) { unsigned int addr = (d->AAddress + j) & 65535;
++                uint8 *base = S9xGetBasePointer((d->ABank << 16) | addr);
++                hash = (hash ^ (base ? base[addr] : 0)) * 16777619u;
++            }
++            fprintf(plain_file, "%d,%08x,%06x\n", count, hash, Registers.PBPC); fflush(plain_file);
++        }
++    }
+ 	// Prepare for custom chip DMA
+ 
+ 	// S-DD1
+@@ -142,6 +154,10 @@ bool8 S9xDoDMA (uint8 Channel)
+ 			{
+ 				in_ptr += d->AAddress;
+ 				SDD1_decompress(sdd1_decode_buffer, in_ptr, d->TransferBytes);
++                { static FILE *trace_file = NULL; static bool trace_init = false;
++                  if (!trace_init) { trace_init = true; const char *path = getenv("SO_SDD1_TRACE"); if (path) trace_file = fopen(path, "w"); }
++                  if (trace_file) { unsigned int hash = 2166136261u; for (int j = 0; j < count; ++j) hash = (hash ^ sdd1_decode_buffer[j]) * 16777619u; fprintf(trace_file, "%02x,%04x,%lld,%d,%08x,%06x,%d\n", d->ABank, d->AAddress, (long long)(in_ptr - Memory.ROM), count, hash, Registers.PBPC, Channel); fflush(trace_file); }
++                }
+ 			}
+ 		#ifdef DEBUGGER
+ 			else
+diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
+index 6060767..9953481 100644
+--- a/libretro/libretro.cpp
++++ b/libretro/libretro.cpp
+@@ -2169,3 +2169,5 @@ void S9xAutoSaveSRAM()
+ {
+     return;
+ }
++extern "C" unsigned int retro_so_debug_pc(void) { return Registers.PBPC; }
++extern "C" unsigned int retro_so_debug_sdd1(void) { return Settings.SDD1; }
