@@ -1,14 +1,15 @@
 from pathlib import Path
-import zlib,struct,hashlib,json
+import zlib,struct,hashlib,json,argparse
 root=Path(__file__).resolve().parent
-src=(root.parent/'upload/Star Ocean FR.smc').read_bytes();target=(root/'FR_routines_opening_experimental.sfc').read_bytes()
+parser=argparse.ArgumentParser();parser.add_argument('--target',default='FR_routines_opening_experimental.sfc');parser.add_argument('--output',default='Star_Ocean_FR_routines_EXPERIMENTAL.bps');args=parser.parse_args()
+src=(root.parent/'upload/Star Ocean FR.smc').read_bytes();target=(root/args.target).read_bytes()
 def var(n):
  b=bytearray()
  while True:
   x=n&127;n>>=7
   if not n:b.append(x|128);return b
   b.append(x);n-=1
-metadata=b'Star Ocean FR: experimental DMA routine port; opening corpus only; incomplete game coverage.'
+metadata=b'Star Ocean FR: experimental DMA routine port; incomplete game coverage; consult the build report.'
 p=bytearray(b'BPS1')+var(len(src))+var(len(target))+var(len(metadata))+metadata
 mapping={0:0}
 for bank in range(64):mapping[(0x80+bank+192)*32768]=bank*65536;mapping[(bank+192)*32768]=bank*65536+32768
@@ -26,7 +27,7 @@ for offset in range(0,len(target),32768):
   else:p+=var((end-cursor-1)*4+1)+data[cursor:end]
   cursor=end
 p+=struct.pack('<II',zlib.crc32(src),zlib.crc32(target));p+=struct.pack('<I',zlib.crc32(p))
-patch=root/'Star_Ocean_FR_routines_EXPERIMENTAL.bps';patch.write_bytes(p)
+patch=root/args.output;patch.write_bytes(p)
 # Independently decode the BPS action stream and verify all three checksums.
 pos=4
 def num():

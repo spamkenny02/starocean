@@ -1,5 +1,5 @@
 diff --git a/dma.cpp b/dma.cpp
-index e1ad324..a4fd40f 100644
+index e1ad324..1c85827 100644
 --- a/dma.cpp
 +++ b/dma.cpp
 @@ -122,6 +122,18 @@ bool8 S9xDoDMA (uint8 Channel)
@@ -7,7 +7,7 @@ index e1ad324..a4fd40f 100644
  		count = 0x10000;
  
 +
-+    if (!Settings.SDD1 && Channel == 0 && Registers.PBPC == 0x64805f) {
++    if (!Settings.SDD1 && (Channel == 0 || Channel == 1) && (Registers.PBPC == 0x64805f || Registers.PBPC == 0x6480df || Registers.PBPC == 0x648077 || Registers.PBPC == 0x648177)) {
 +        static FILE *plain_file = NULL; static bool plain_init = false;
 +        if (!plain_init) { plain_init = true; const char *path = getenv("SO_PLAIN_TRACE"); if (path) plain_file = fopen(path, "w"); }
 +        if (plain_file) { unsigned int hash = 2166136261u;
@@ -33,12 +33,13 @@ index e1ad324..a4fd40f 100644
  		#ifdef DEBUGGER
  			else
 diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
-index 6060767..9953481 100644
+index 6060767..9f61cd0 100644
 --- a/libretro/libretro.cpp
 +++ b/libretro/libretro.cpp
-@@ -2169,3 +2169,5 @@ void S9xAutoSaveSRAM()
+@@ -2169,3 +2169,6 @@ void S9xAutoSaveSRAM()
  {
      return;
  }
 +extern "C" unsigned int retro_so_debug_pc(void) { return Registers.PBPC; }
 +extern "C" unsigned int retro_so_debug_sdd1(void) { return Settings.SDD1; }
++extern "C" unsigned int retro_so_debug_joy(void) { return Memory.FillRAM[0x4218] | (Memory.FillRAM[0x4219] << 8); }

@@ -18,3 +18,10 @@ analysis/deps/
 analysis/*reference.json
 analysis/*manifest.json
 analysis/routine_port.json
+*.state
+*.srm
+analysis/catalog_extended.json
+analysis/routine_port_extended.json
+analysis/catalog_conflicts.json
+analysis/matched_french_streams.json
+analysis/aligned_pointer_contexts.json

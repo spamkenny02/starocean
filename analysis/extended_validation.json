@@ -1,0 +1,41 @@
+{
+  "status": "experimental; not complete-game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "e33886a7d4eda057d198041b653b062d702af533d1bf0f068871691ff821cc19",
+  "catalog_addresses": 18572,
+  "catalog_observed_addresses": 609,
+  "source_bank_state_conflicts_observed": 0,
+  "lookup_key_bits": 24,
+  "maximum_probe_distance": 119,
+  "handler_bytes_per_channel": 152,
+  "channels_implemented": [
+    0,
+    1
+  ],
+  "channels_exercised_by_gameplay": [
+    0
+  ],
+  "hooks": 110,
+  "frames": 42815,
+  "redirected_transfers": 27919,
+  "distinct_length_fnv32_pairs": 584,
+  "unknown_transfer_hash_pairs": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "equipment_frame_pixel_identical_to_original": true,
+  "validated_views": [
+    "introduction",
+    "house movement",
+    "room transition",
+    "objects menu",
+    "character status",
+    "equipment menu"
+  ],
+  "not_validated": [
+    "complete story",
+    "all maps",
+    "combat",
+    "save/load",
+    "hardware"
+  ],
+  "snes9x_commit": "1bcc369e89f08243e0a462882fb1f3e42e51de3a"
+}
