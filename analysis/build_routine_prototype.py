@@ -7,6 +7,8 @@ parser.add_argument('--callsites',default='observed_callsites.json')
 parser.add_argument('--output',default='FR_routines_opening_experimental.sfc')
 parser.add_argument('--report',default='routine_port.json')
 parser.add_argument('--channels',default='0')
+parser.add_argument('--lookup-slots',help='Preserve existing full-key probe positions from an address/slot manifest')
+parser.add_argument('--write-lookup-slots',help='Write the complete updated address/slot manifest')
 parser.add_argument('--full-keys',action='store_true',help='Compare all 24 bits of each source address')
 args=parser.parse_args();channels=[int(x) for x in args.channels.split(',')];assert channels and len(set(channels))==len(channels) and all(0<=x<=7 for x in channels)
 
@@ -64,6 +66,24 @@ data_start=0x670000 if args.full_keys else 0x650000
 end=data_start;placed=[]
 regions=[(data_start,0x7e0000)]+[(bank*65536+0x8000,(bank+1)*65536) for bank in list(range(1,64))+list(range(0x80,0xc0))]
 region_index=0
+seed_slots={};occupied_slots=set()
+if args.lookup_slots:
+ assert args.full_keys,'Stable lookup slots require full source keys'
+ path=root/args.lookup_slots;payload=path.read_bytes();rows=json.loads(gzip.decompress(payload) if path.suffix=='.gz' else payload)
+ for bank,addr,slot in rows:
+  key=(bank,addr)
+  assert key in streams and key not in seed_slots and 0<=slot<65536 and slot not in occupied_slots,'Invalid lookup seed'
+  seed_slots[key]=slot;occupied_slots.add(slot)
+assigned_slots={}
+for key in sorted(streams):
+ if key in seed_slots:slot=seed_slots[key]
+ else:
+  slot=key[1];probes=0
+  while slot in occupied_slots:
+   slot=(slot+1)&65535;probes+=1
+   assert probes<65536,'Lookup table is full'
+  occupied_slots.add(slot)
+ assigned_slots[key]=slot
 
 for (bank,addr),r in sorted(streams.items()):
  n=r['length'];off=r['source_file'];a=ctypes.create_string_buffer(src[off:off+max(65536,n*2)]+bytes(65536));b=ctypes.create_string_buffer(n);fn(b,a,n)
@@ -76,8 +96,7 @@ for (bank,addr),r in sorted(streams.items()):
  assert end>>16 not in (0x7e,0x7f)
 
  linear[end:end+n]=b.raw
- slot=addr
- while linear[0x600000+slot]:slot=(slot+1)&65535
+ slot=assigned_slots[(bank,addr)]
  if args.full_keys:linear[0x650000+slot]=addr&255;linear[0x660000+slot]=addr>>8
  linear[0x600000+slot]=bank;linear[0x610000+slot]=end&255;linear[0x620000+slot]=end>>8&255;linear[0x630000+slot]=end>>16
  placed.append(dict(r,slot=slot,target_cpu=end));end+=n
@@ -121,7 +140,12 @@ linear[0x8000:0x10000]=fr[:32768]
 gd=bytearray()
 for i in range(192):gd+=linear[i*65536+32768:(i+1)*65536]
 for i in range(192):gd+=linear[i*65536:i*65536+32768]
+if args.write_lookup_slots:
+ path=root/args.write_lookup_slots;payload=(json.dumps([[bank,addr,assigned_slots[(bank,addr)]] for bank,addr in sorted(streams)])+'\n').encode()
+ if path.suffix=='.gz':
+  with gzip.GzipFile(filename=str(path),mode='wb',mtime=0) as z:z.write(payload)
+ else:path.write_bytes(payload)
 (root/args.output).write_bytes(gd)
 (root/'routine_handler.bin').write_bytes(code)
-(root/args.report).write_text(json.dumps({'prototype':'experimental; incomplete game coverage','catalog':args.catalog,'channels':channels,'full_keys':args.full_keys,'code_stride':code_stride,'raw_audio_bank_patch':{'offset':bank_at,'old':0xe3,'new':0x43},'bank_reader_helper':{'offset':helper_at,'bytes':helper.hex(),'call_offsets':[0x863d,0x86dd]},'sram_references_changed':[i+3 for i in range(0x8000,0xd400-3) if src[i] in [0x8f,0xaf,0xbf,0x9f] and src[i+3]==0x70],'code_cpu':0x648000,'code_size':len(code),'labels':labels,'hooks':hooks,'streams':placed,'data_end':end,'sha256':hashlib.sha256(gd).hexdigest()},indent=2))
+(root/args.report).write_text(json.dumps({'prototype':'experimental; incomplete game coverage','catalog':args.catalog,'lookup_slots':args.lookup_slots,'channels':channels,'full_keys':args.full_keys,'code_stride':code_stride,'raw_audio_bank_patch':{'offset':bank_at,'old':0xe3,'new':0x43},'bank_reader_helper':{'offset':helper_at,'bytes':helper.hex(),'call_offsets':[0x863d,0x86dd]},'sram_references_changed':[i+3 for i in range(0x8000,0xd400-3) if src[i] in [0x8f,0xaf,0xbf,0x9f] and src[i+3]==0x70],'code_cpu':0x648000,'code_size':len(code),'labels':labels,'hooks':hooks,'streams':placed,'data_end':end,'sha256':hashlib.sha256(gd).hexdigest()},indent=2))
 print('Built',len(gd),'bytes;',len(hooks),'hooks;',len(streams),'source addresses;',len(code),'code bytes')

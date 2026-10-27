@@ -334,3 +334,6 @@ uint8 SDD1_get_byte(void){
     }
 }
 #endif
+
+// Analysis-only: decoder reads ahead by up to one byte. Not a stream length proof.
+extern "C" int SO_SDD1_input_span(unsigned char *start) { return (int)(in_buf-start); }

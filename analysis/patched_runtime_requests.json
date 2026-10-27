@@ -1,10 +1,50 @@
 [
   {
-    "cpu_bank": 246,
-    "cpu_address": 17221,
-    "source_file": 3556165,
+    "cpu_bank": 235,
+    "cpu_address": 50136,
+    "source_file": 2868184,
     "length": 64,
     "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 235,
+    "cpu_address": 50243,
+    "source_file": 2868291,
+    "length": 64,
+    "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 236,
+    "cpu_address": 12338,
+    "source_file": 2895922,
+    "length": 64,
+    "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 237,
+    "cpu_address": 17782,
+    "source_file": 2966902,
+    "length": 64,
+    "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 242,
+    "cpu_address": 44196,
+    "source_file": 3320996,
+    "length": 64,
+    "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 242,
+    "cpu_address": 64912,
+    "source_file": 3341712,
+    "length": 64,
+    "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
     "priority": 9
   },
   {
@@ -16,9 +56,9 @@
     "priority": 9
   },
   {
-    "cpu_bank": 235,
-    "cpu_address": 50243,
-    "source_file": 2868291,
+    "cpu_bank": 246,
+    "cpu_address": 17221,
+    "source_file": 3556165,
     "length": 64,
     "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
     "priority": 9

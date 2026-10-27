@@ -24,6 +24,10 @@ for folder in sorted(root.glob('runs/fr_*')):
   f=line.split(',')
   if len(f)<5:continue
   add(int(f[0],16),int(f[1],16),int(f[2]),int(f[3]),'observed '+folder.name,10)
+paired=root/'paired_dma_sources.json.gz'
+if paired.exists():
+ for x in json.loads(gzip.decompress(paired.read_bytes())):
+  key=x['second_pointer'];add(key>>16,key&65535,x['source_file'],x['length'],'derived second 64-byte DMA from structured nine-byte table run',3)
 requests=root/'patched_runtime_requests.json'
 if requests.exists():
  for x in json.loads(requests.read_text()):add(x['cpu_bank'],x['cpu_address'],x['source_file'],x['length'],x['method'],9)

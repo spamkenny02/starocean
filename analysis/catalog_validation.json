@@ -1,7 +1,7 @@
 {
-  "streams_verified": 19103,
-  "max_lookup_probe_distance": 120,
-  "sha256": "10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e",
+  "streams_verified": 30267,
+  "max_lookup_probe_distance": 211,
+  "sha256": "9718581903ccf9cf74308ff611fdbecf6c5cb412f5a7b7b64c974a5ffe676e51",
   "channels": [
     0,
     1

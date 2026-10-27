@@ -1,5 +1,5 @@
 {
-  "status": "failed replay before corrective catalog entry",
+  "status": "historical failures, superseded by paired DMA source analysis",
   "target_sha256": "72b4592c7212f82f899851e650691eb81d076d48bad992eebed2bed59ed4cb05",
   "route": "route_story_oct27.json",
   "frames": 60820,
@@ -39,5 +39,22 @@
     "per_source_decompression_errors": 0,
     "handler_trap_samples": 10,
     "integrated": false
+  },
+  "current_resolution": {
+    "target_sha256": "9718581903ccf9cf74308ff611fdbecf6c5cb412f5a7b7b64c974a5ffe676e51",
+    "identified_sources_recovered": [
+      "f64345",
+      "f42349",
+      "ebc443",
+      "ebc3d8",
+      "f2fd90",
+      "f2aca4",
+      "ed4576",
+      "ec3032",
+      "f89e1b"
+    ],
+    "baird_passed": true,
+    "night_and_return_to_hq_passed": true,
+    "whole_scenario_complete": false
   }
 }

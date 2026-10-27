@@ -1,28 +1,32 @@
-# Reprise après le relevé de Clatos
+# Reprise après Baird et le retour au QG
 
-Lire STATUS.md et analysis/story_validation.json avant de reconstruire. Le scénario complet n'est pas terminé.
+Dernier jalon : Baird est franchi sans S-DD1. Le replay de 85 650 images atteint la même vue dorée extérieure du QG que l’original, après nuit, réveil, retour au QG et dialogue avec l’ancien. La suite de cette transition n’est pas encore identifiée ; ne pas prétendre avoir atteint Cool ou lu entièrement une lettre sans voir la scène.
 
-## Référence originale
+## États privés exacts
 
-La sortie du QG se trouve dans la petite pièce accessible par l'ouverture noire au nord-est de la grande salle. Dans cette petite pièce, aller vers le passage inférieur droit, centré dans l'ouverture : le bord droit bloque le personnage. Le bas de la grande salle n'était pas la sortie.
+- Original : `analysis/runs/fr_chapter2_live/end.state` (copie composée : `analysis/runs/fr_chapter2_reference/end.state`), 85 650 images, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`.
+- Prototype courant : `analysis/runs/fr_chapter2_groups2/end.state`, 85 650 images, SHA256 `9718581903ccf9cf74308ff611fdbecf6c5cb412f5a7b7b64c974a5ffe676e51`.
+- Route complète depuis le reset : `analysis/route_chapter2.json`. Les touches automatiques avant 24 000 images restent définies dans run_headless.py.
 
-La référence a passé les deux groupes de voleurs puis Baird. Dernier état privé : `/workspace/scratch/872b8bba255b/analysis/runs/fr_story_baird_reference/end.state`, 64 145 images, même SHA256 original `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Capture finale : dialogue « Mère de Ratix : À bientôt. » dans la maison. Une variante d'attaques existe dans `analysis/runs/fr_baird_reference_variant/`, avec sa propre route et le même SHA256. Ne pas remplacer l'un par l'autre implicitement.
+Le workspace est `/workspace/scratch/872b8bba255b`. Les outils et le cœur sont dans `analysis/`, la copie publique dans `starocean/analysis/`. Ne jamais charger un état d’un autre SHA256. Toute nouvelle reconstruction impose une relecture depuis le reset pour la nouvelle cible.
 
-Le parcours complet est versionné dans `analysis/route_story_baird.json`. L'autre route, `route_baird_reference_variant.json`, change le rythme des confirmations à partir de 53 030 images. Cette variante a ajouté 16 adresses au catalogue et confirmé 36 clés supplémentaires sur l'original.
+## Catalogue et outils
 
-## Prototype
+30 267 clés : 1 976 observées sur l’original, 8 demandées par le prototype avec source physique déduite, 28 283 autres déduites/comparées. 70 PC observés, 110 hooks, gestionnaires DMA0/1 de 152 octets ; seul DMA0 a été exercé en jeu.
 
-Dernière cible reconstruite : SHA256 `10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e`. Catalogue 19 103 clés : 1 779 observées sur l'original, 17 321 déduites des comparaisons/structures, 3 demandées par le prototype avec source physique déduite. Le détail des résultats et de tout blocage de Baird figure dans `analysis/story_validation.json` et STATUS.md.
+La routine autour de l’offset source 0x39900 lit deux blocs de 64 octets. La seconde adresse ajoute le déplacement Y+3 au premier pointeur. `derive_paired_dma_sources.py` récupère ces sources à partir d’ancrages figés, de la consommation du décodeur et de suites de deux entrées de neuf octets au minimum. `paired_dma_sources.json.gz` contient 16 032 entrées et 11 945 clés secondaires distinctes ; toutes ne sont pas observées en jeu.
 
-Les essais ont identifié les sources manquantes `$F6:4345`, `$F4:2349` et `$EB:C443`, 64 octets chacune. Elles sont désormais intégrées via `patched_runtime_requests.json` et `merge_catalogs.py`, sans les classer comme lectures observées sur l'original. Les sources physiques présumées suivent le mapping par défaut déjà vérifié sur les sources voisines. Les essais précédents sont documentés dans `baird_missing_source.json`.
+Le constructeur conserve les cases existantes avec `--lookup-slots lookup_slots.json.gz`. Après extension, ajouter `--write-lookup-slots lookup_slots.json.gz` et versionner le manifeste. Les 19 103 anciennes cases sont inchangées ; le prototype d’ouverture garde son SHA256 historique. Exécuter validate_catalog.py et le round-trip BPS après chaque reconstruction.
 
-Le cœur local doit être recompilé après application de `snes9x_port_test.patch`. Une ancienne bibliothèque sous-comptait les transferts. Le nouveau journal plain_dma.csv ajoute la clé d'origine sauvegardée sur la pile du gestionnaire, après longueur/empreinte/PC. `compare_replays.py` vérifie la décompression par clé et détecte les échantillons de boucle d'arrêt `$64:8096`/`$64:8196` ; S-DD1=false ne suffit pas à prouver qu'un combat fonctionne.
+Attention : un gel sur une source absente peut être masqué par NMI, PC 00:F9F9. L’ancienne continuation s’arrêtait ainsi sur F8:9E1B alors que les empreintes DMA précédentes passaient. Cette source est désormais intégrée par la règle des paires de deux entrées, et le comparateur détecte les sources DMA non résolues persistantes. S-DD1=false et absence d’échantillon au gestionnaire ne suffisent pas à valider un parcours.
 
-## Actions suivantes
+## Suite
 
-1. Traiter la source manquante **`$EB:C3D8`, 64 octets**, repérée pendant Baird sur le dernier prototype. Elle n’est pas encore intégrée. Dernier état privé du prototype : `analysis/runs/fr_baird_three_keys/end.state`, SHA256 `10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e`, 64 145 images, boucle d’arrêt. Les 38 944 transferts précédents passent les 1 517 contrôles par clé, mais le replay global échoue. Ne pas revendiquer la validation de Baird. Le journal et les échantillons contiennent la clé DMA0 ; un état privé du même SHA256 permet aussi de lire les exports debug_dma_source/debug_dma_length.
-2. Poursuivre la référence originale depuis les dialogues dans la maison : retour au QG, lettre, puis départ vers Cool et Metox. Confirmer la scène à l'écran avant de la nommer dans le bilan.
-3. Fusionner les nouvelles traces, reconstruire, exécuter validate_catalog.py et le round-trip BPS, puis rejouer les routes sur la nouvelle cible depuis le reset. Ne jamais charger un état d'un SHA256 différent.
-4. Préserver la distinction entre état instantané et sauvegarde de cartouche. SRAM, chargement, autres canaux et matériel réel restent à tester.
+1. Continuer la scène dorée sur l’original avec des attentes et confirmations courtes, relever le texte et la prochaine destination.
+2. Rejouer la même continuation sur le prototype du même SHA256 ; corriger le parcours si les timings divergent et conserver une route distincte si nécessaire.
+3. Poursuivre vers Cool, puis Metox et Calnus. Confirmer chaque scène à l’écran. Ne pas limiter le suivi aux empreintes : contrôler mouvements, dialogues, combats, effets et menus.
+4. Fusionner les traces et garder séparées observations originales, demandes du prototype et déductions statiques.
 
-Les ROMs, images de jeu et états sont privés ; ne publier que code, routes, métadonnées, empreintes et patches différentiels.
+Dernier bilan : 70 052 DMA redirigés, 1 914 tuples vérifiés, aucune erreur de décompression ni arrêt détecté ; 40 captures identiques sur 126, dont la dernière. La couverture du scénario entier, SRAM/sauvegarde de cartouche, chargement et matériel réel restent à établir. Les états instantanés ne prouvent pas la sauvegarde de cartouche.
+
+Ne publier ni ROM, ni données graphiques extraites, ni états privés. Code, routes, métadonnées, empreintes et patches différentiels uniquement.

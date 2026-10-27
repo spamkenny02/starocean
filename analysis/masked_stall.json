@@ -1,0 +1,17 @@
+{
+  "target_sha256": "452540ba75230e1eaf50660dbacec4136fde4225d9a04f65837c2495f3377ad8",
+  "source": "f89e1b",
+  "length": 64,
+  "symptoms": [
+    "Unchanged city image despite multiple directional commands",
+    "DMA0 source/length persist across many samples",
+    "PC repeatedly sampled at NMI entry 00:f9f9"
+  ],
+  "prior_handler_trap_sample_count": 0,
+  "prior_dma_hash_check_errors": 0,
+  "interpretation": "Continuation stalled; prior DMA-only pass was insufficient. Source derives from a two-entry table run omitted by the earlier three-entry filter.",
+  "first_pointer": "f89e04",
+  "table_offset": 301153,
+  "displacement": 23,
+  "current_filter_minimum_run": 2
+}

@@ -1,0 +1,10 @@
+{
+  "status": "static deduction, not proof of runtime coverage",
+  "accepted_table_entries": 16032,
+  "distinct_second_sources": 11945,
+  "known_missing_sources_recovered": 9,
+  "includes_masked_stall_source_f89e1b": true,
+  "minimum_consecutive_entries": 2,
+  "paired_manifest_sha256": "ce07c51024663c7ffe1c5c258500fe8c0d616ce2597462c4489893fae4b426dc",
+  "regenerated_from_frozen_anchors_identically": true
+}
