@@ -1,0 +1,26 @@
+[
+  {
+    "cpu_bank": 246,
+    "cpu_address": 17221,
+    "source_file": 3556165,
+    "length": 64,
+    "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 244,
+    "cpu_address": 9033,
+    "source_file": 3416905,
+    "length": 64,
+    "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
+    "priority": 9
+  },
+  {
+    "cpu_bank": 235,
+    "cpu_address": 50243,
+    "source_file": 2868291,
+    "length": 64,
+    "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
+    "priority": 9
+  }
+]

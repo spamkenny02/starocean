@@ -24,6 +24,9 @@ for folder in sorted(root.glob('runs/fr_*')):
   f=line.split(',')
   if len(f)<5:continue
   add(int(f[0],16),int(f[1],16),int(f[2]),int(f[3]),'observed '+folder.name,10)
+requests=root/'patched_runtime_requests.json'
+if requests.exists():
+ for x in json.loads(requests.read_text()):add(x['cpu_bank'],x['cpu_address'],x['source_file'],x['length'],x['method'],9)
 output=sorted(catalog.values(),key=lambda x:(x['cpu_bank'],x['cpu_address']))
 text=json.dumps(output,indent=2)+'\n';(root/'catalog_extended.json').write_text(text)
 with gzip.GzipFile(filename=str(root/'catalog_extended.json.gz'),mode='wb',mtime=0) as z:z.write(text.encode())

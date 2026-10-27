@@ -10,6 +10,7 @@ os.environ['SO_SDD1_TRACE']=str(outdir/'sdd1.csv')
 os.environ['SO_PLAIN_TRACE']=str(outdir/'plain_dma.csv')
 core=C.CDLL(str(root/'snes9x/libretro/snes9x_libretro.so'))
 ENV=C.CFUNCTYPE(C.c_bool,C.c_uint,C.c_void_p);VIDEO=C.CFUNCTYPE(None,C.c_void_p,C.c_uint,C.c_uint,C.c_size_t);AUDIO=C.CFUNCTYPE(None,C.c_int16,C.c_int16);BATCH=C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t);POLL=C.CFUNCTYPE(None);INPUT=C.CFUNCTYPE(C.c_int16,C.c_uint,C.c_uint,C.c_uint,C.c_uint)
+extra_captures={int(x) for x in os.environ.get('SO_CAPTURE_FRAMES','').split(',') if x}
 frame=0;pixel=0;directories=C.c_char_p(str(outdir).encode());captures=[]
 @ENV
 def env(cmd,data):
@@ -21,7 +22,7 @@ def env(cmd,data):
  return False
 @VIDEO
 def video(data,w,h,pitch):
- if not data or (frame not in [0,119,299,599,1199,2399,4799,7199,11999,17999,frames-1] and not (route and frame>=24000 and frame%600==599)):return
+ if not data or (frame not in extra_captures and frame not in [0,119,299,599,1199,2399,4799,7199,11999,17999,frames-1] and not (route and frame>=24000 and frame%600==599)):return
  if pixel==1:
   arr=np.frombuffer(C.string_at(data,pitch*h),dtype=np.uint32).reshape(h,pitch//4)[:,:w];rgb=np.stack(((arr>>16)&255,(arr>>8)&255,arr&255),-1).astype('uint8')
  else:
@@ -58,7 +59,7 @@ if len(sys.argv)>5:
 pcs=[]
 for frame in range(baseframe,frames):
  core.retro_run()
- if frame in [0,119,299,599,1199,2399,4799,7199,11999,17999,frames-1]:pcs.append({'frame':frame+1,'pc':hex(core.retro_so_debug_pc()),'sdd1_enabled':bool(core.retro_so_debug_sdd1()),'joy_register':hex(core.retro_so_debug_joy()),'input_mask':hex(inp(0,1,0,256))})
+ if frame in extra_captures or frame%600==599 or frame==frames-1:pcs.append({'frame':frame+1,'pc':hex(core.retro_so_debug_pc()),'sdd1_enabled':bool(core.retro_so_debug_sdd1()),'joy_register':hex(core.retro_so_debug_joy()),'input_mask':hex(inp(0,1,0,256)),'dma0_source':hex(core.retro_so_debug_dma_source(0)),'dma0_length':core.retro_so_debug_dma_length(0)})
 (outdir/'cpu_samples.json').write_text(json.dumps(pcs,indent=2))
 core.retro_serialize_size.restype=C.c_size_t
 state_size=core.retro_serialize_size();state_buffer=C.create_string_buffer(state_size);core.retro_serialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_serialize.restype=C.c_bool

@@ -1,0 +1,9 @@
+{
+  "streams_verified": 19103,
+  "max_lookup_probe_distance": 120,
+  "sha256": "10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e",
+  "channels": [
+    0,
+    1
+  ]
+}

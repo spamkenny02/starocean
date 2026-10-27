@@ -1,0 +1,43 @@
+{
+  "status": "failed replay before corrective catalog entry",
+  "target_sha256": "72b4592c7212f82f899851e650691eb81d076d48bad992eebed2bed59ed4cb05",
+  "route": "route_story_oct27.json",
+  "frames": 60820,
+  "redirected_transfers": 38938,
+  "handler_trap_pc": "648096",
+  "missing_cpu_source": "f64345",
+  "requested_length": 64,
+  "cartridge_save_test": false,
+  "diagnostic": "Read DMA0 source/length from a private same-ROM emulator state at the handler trap. New entry is recorded separately in patched_runtime_requests.json, not as an original-ROM observation.",
+  "second_attempt": {
+    "target_sha256": "6e57299bb28f4c4fcdadd46b25ceaa84c088b3ab76b6f7741612ef94434582e9",
+    "frames": 64145,
+    "missing_cpu_source": "f42349",
+    "requested_length": 64,
+    "redirected_transfers": 37836,
+    "per_source_length_hash_checks": 1502,
+    "per_source_decompression_errors": 0,
+    "handler_trap_samples": 10
+  },
+  "third_attempt": {
+    "target_sha256": "d4b2c54547b81b941b82cc96d085ffdd8369a7e49b84c8c2414d22a34b400c06",
+    "frames": 64145,
+    "missing_cpu_source": "ebc443",
+    "requested_length": 64,
+    "redirected_transfers": 38942,
+    "per_source_length_hash_checks": 1515,
+    "per_source_decompression_errors": 0,
+    "handler_trap_samples": 10
+  },
+  "current_attempt": {
+    "target_sha256": "10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e",
+    "frames_requested": 64145,
+    "pending_cpu_source": "ebc3d8",
+    "requested_length": 64,
+    "redirected_transfers_before_trap": 38944,
+    "per_source_length_hash_checks": 1517,
+    "per_source_decompression_errors": 0,
+    "handler_trap_samples": 10,
+    "integrated": false
+  }
+}

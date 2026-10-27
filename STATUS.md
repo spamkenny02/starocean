@@ -2,7 +2,7 @@
 
 La cible est la traduction BadCompany fournie. La version actuelle reste expérimentale : aucune validation du jeu entier n’a été faite.
 
-## Résultats acquis
+## Jalon précédent
 
 - Prototype d’ouverture conservé et reproductible : SHA256 cible `e00caf90b85cfcb216b1fc5462511dd7a5b1cbf368f355fb527371103b86bec3`.
 - Catalogue étendu : 18 572 adresses, 609 observées, aucune ambiguïté de page source constatée dans les relevés présents.
@@ -25,3 +25,31 @@ La cible est la traduction BadCompany fournie. La version actuelle reste expéri
 Le gestionnaire s’arrête sur une case vide si une source manque. Les longueurs du catalogue sont des longueurs de reconstruction, pas une preuve que tous les DMA du jeu ont été recensés.
 
 Le prochain jalon porte sur des parcours extérieurs et les combats, tout en poursuivant l’analyse des tables non résolues. Les sauvegardes feront l’objet d’un contrôle distinct des états instantanés d’émulateur.
+
+## Reprise du 27 octobre — scénario initial
+
+La référence instrumentée atteint la sortie du QG (petite pièce attenante, passage inférieur droit), les deux groupes de voleurs puis Baird et le dialogue dans la maison. Parcours complet depuis le reset : `analysis/route_story_oct27.json`, 60 820 images. Le personnage n'était pas devant une sortie dans le bas de la grande salle : cette tentative était bloquée par le décor.
+
+Catalogue : 19 103 adresses (+531), dont 1 779 observées sur l’original (+1 170), longueur de reconstruction cumulée 1 882 158 octets, aucun conflit de source physique recensé. Il reste 17 321 entrées déduites des comparaisons/structures et trois demandes du prototype avec source physique déduite. Les longueurs observées sont les maxima des relevés présents, pas une preuve d'exhaustivité future.
+
+69 points d'appel de DMA compressé observés au total (+6), couverts par les 110 remplacements existants. Les nouveaux PC sont `$C0:23BA`, `$C0:23EB`, `$C0:2BF6`, `$C3:9550`, `$C3:993B`, `$C3:9957` (voir le fichier versionné pour la liste exacte). Aucun nouveau canal rencontré : seul DMA0 reste exercé en jeu. Aucun changement des octets des gestionnaires n'a été nécessaire à cette extension.
+
+Reconstruction : cible SHA256 `10837701a3b53b572346785e95b77148e3aadd9ecc23bc37824a0f798e02d91e`. Les 19 103 destinations passent le validateur indépendant (distance maximale 120). Le BPS est redécodé octet par octet et ses trois CRC sont contrôlés.
+
+Attention à l'instrumentation : la bibliothèque locale compilée avant la dernière modification de `dma.cpp` sous-comptait les transferts (638 sur la première tentative). Elle a été recompilée ; ce premier décompte ne constitue pas la preuve de validation. `analysis/story_validation.json` porte le résultat de la relecture effectuée avec le cœur reconstruit.
+
+Le premier replay de Baird a réellement échoué sur la boucle `$64:8096` : source DMA0 `$F6:4345`, 64 octets, absente du catalogue. `analysis/baird_missing_source.json` conserve ce diagnostic. La correction est conservée séparément dans `patched_runtime_requests.json` (priorité 9), sans la présenter comme une observation de la ROM originale. La source physique `$36:4345` est déduite du mapping par défaut et des sources voisines vérifiées ; elle doit encore être confirmée par un DMA original équivalent.
+
+Le comparateur exploite maintenant la clé source sauvegardée sur la pile du gestionnaire pour contrôler chaque tuple clé/longueur/empreinte contre une décompression indépendante de la ROM française. Les empreintes absentes de la route originale restent comptées séparément, même lorsqu'elles passent ce contrôle. Un échantillon pris dans la boucle d'arrêt invalide la validation.
+
+Les demandes supplémentaires identifiées pendant les essais successifs de Baird sont `$F6:4345`, `$F4:2349` et `$EB:C443`, chacune sur 64 octets. Elles ne sont pas reclassées comme observées sur l'original. Le relevé avec rythme d'attaque différent (`route_baird_reference_variant.json`) a apporté 16 autres nouvelles adresses et 36 observations supplémentaires ; il n'a pas confirmé ces trois demandes. Ses 27 233 transferts sont décrits dans `baird_variant_observed.json.gz`.
+
+### Résultat du dernier replay de la cible publiée
+
+Sur les 64 145 images demandées, le prototype passe la sortie du QG et les deux groupes de voleurs, puis se bloque pendant Baird : nouvelle source manquante `$EB:C3D8`, 64 octets. Elle n'est pas encore intégrée. Le compteur d'images continue pendant la boucle d'arrêt : ce nombre n'est donc pas une progression de scénario réussie.
+
+38 944 transferts ont été redirigés avant le blocage. Les 1 517 tuples distincts clé/longueur/empreinte vérifiés correspondent tous à une décompression de la source française choisie dans le catalogue. Sept paires longueur/FNV32 ne figurent pas dans la route originale principale, mais passent ce contrôle par clé ; elles ne sont pas présentées comme observées sur l'original. Les trois sources ajoutées depuis les demandes du prototype conservent une provenance physique déduite.
+
+S-DD1 est désactivé sur les 114 échantillons, aucun transfert S-DD1 résiduel n'est journalisé, mais dix échantillons atteignent la boucle d'arrêt. Le comparateur échoue donc volontairement (`dma_checks_passed=false`). Les 84 captures comparées n'en ont que 23 identiques ; les combats divergent en timing et en décisions. Aucune équivalence visuelle complète n'est revendiquée.
+
+La première action suivante est de traiter `$EB:C3D8`, puis de refaire la reconstruction et le parcours. La référence originale, indépendante, a terminé Baird et atteint les dialogues chez la mère de Ratix à 64 145 images. Ni la sauvegarde de cartouche, ni Cool/Metox/Calnus, ni le jeu complet ne sont validés sur ce prototype.

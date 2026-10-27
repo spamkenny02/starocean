@@ -1,8 +1,8 @@
 diff --git a/dma.cpp b/dma.cpp
-index e1ad324..1c85827 100644
+index e1ad324..fd6a932 100644
 --- a/dma.cpp
 +++ b/dma.cpp
-@@ -122,6 +122,18 @@ bool8 S9xDoDMA (uint8 Channel)
+@@ -122,6 +122,19 @@ bool8 S9xDoDMA (uint8 Channel)
  	if (count == 0)
  		count = 0x10000;
  
@@ -15,13 +15,14 @@ index e1ad324..1c85827 100644
 +                uint8 *base = S9xGetBasePointer((d->ABank << 16) | addr);
 +                hash = (hash ^ (base ? base[addr] : 0)) * 16777619u;
 +            }
-+            fprintf(plain_file, "%d,%08x,%06x\n", count, hash, Registers.PBPC); fflush(plain_file);
++            unsigned int sp = Registers.S.W; unsigned int key = Memory.RAM[(sp + 2) & 65535] | (Memory.RAM[(sp + 3) & 65535] << 8) | (Memory.RAM[(sp + 4) & 65535] << 16);
++            fprintf(plain_file, "%d,%08x,%06x,%06x\n", count, hash, Registers.PBPC, key); fflush(plain_file);
 +        }
 +    }
  	// Prepare for custom chip DMA
  
  	// S-DD1
-@@ -142,6 +154,10 @@ bool8 S9xDoDMA (uint8 Channel)
+@@ -142,6 +155,10 @@ bool8 S9xDoDMA (uint8 Channel)
  			{
  				in_ptr += d->AAddress;
  				SDD1_decompress(sdd1_decode_buffer, in_ptr, d->TransferBytes);
@@ -33,13 +34,25 @@ index e1ad324..1c85827 100644
  		#ifdef DEBUGGER
  			else
 diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
-index 6060767..9f61cd0 100644
+index 6060767..c25c35e 100644
 --- a/libretro/libretro.cpp
 +++ b/libretro/libretro.cpp
-@@ -2169,3 +2169,6 @@ void S9xAutoSaveSRAM()
+@@ -3,6 +3,7 @@
+ 
+ #include "snes9x.h"
+ #include "memmap.h"
++#include "dma.h"
+ #include "srtc.h"
+ #include "apu/apu.h"
+ #include "apu/bapu/snes/snes.hpp"
+@@ -2169,3 +2170,10 @@ void S9xAutoSaveSRAM()
  {
      return;
  }
 +extern "C" unsigned int retro_so_debug_pc(void) { return Registers.PBPC; }
 +extern "C" unsigned int retro_so_debug_sdd1(void) { return Settings.SDD1; }
 +extern "C" unsigned int retro_so_debug_joy(void) { return Memory.FillRAM[0x4218] | (Memory.FillRAM[0x4219] << 8); }
++
++extern "C" unsigned int retro_so_debug_dma_source(unsigned int ch) { if (ch > 7) return 0; return (DMA[ch].ABank << 16) | DMA[ch].AAddress; }
++extern "C" unsigned int retro_so_debug_dma_length(unsigned int ch) { return ch < 8 ? DMA[ch].TransferBytes : 0; }
++extern "C" unsigned int retro_so_debug_remap(void) { return Memory.FillRAM[0x4804] | (Memory.FillRAM[0x4805] << 8) | (Memory.FillRAM[0x4806] << 16) | (Memory.FillRAM[0x4807] << 24); }
