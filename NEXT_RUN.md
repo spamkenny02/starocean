@@ -1,32 +1,35 @@
-# Reprise après Baird et le retour au QG
+# Reprise : lettre reçue et chemin de Cool
 
-Dernier jalon : Baird est franchi sans S-DD1. Le replay de 85 650 images atteint la même vue dorée extérieure du QG que l’original, après nuit, réveil, retour au QG et dialogue avec l’ancien. La suite de cette transition n’est pas encore identifiée ; ne pas prétendre avoir atteint Cool ou lu entièrement une lettre sans voir la scène.
+Cool n'est pas encore atteint. La lettre de l'épidémie, le départ de Milly, la sortie de Clatos et les premiers combats extérieurs sont maintenant relevés. Le prototype a terminé un combat extérieur, gagné un niveau et retrouvé le chemin après correction de son trajet.
 
-## États privés exacts
+## États privés
 
-- Original : `analysis/runs/fr_chapter2_live/end.state` (copie composée : `analysis/runs/fr_chapter2_reference/end.state`), 85 650 images, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`.
-- Prototype courant : `analysis/runs/fr_chapter2_groups2/end.state`, 85 650 images, SHA256 `9718581903ccf9cf74308ff611fdbecf6c5cb412f5a7b7b64c974a5ffe676e51`.
-- Route complète depuis le reset : `analysis/route_chapter2.json`. Les touches automatiques avant 24 000 images restent définies dans run_headless.py.
+- Original, exploration principale : `analysis/runs/fr_cool_original/end.state`, 110 429 images, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Route : `route_cool.json`.
+- Original, point du panneau restauré : `analysis/runs/fr_sign_checkpoint/end.state`, 109 397 images, même SHA256. La capture est identique au premier relevé. C'est un point pratique pour reprendre l'embranchement sans refaire les combats.
+- Original, exploration alternative depuis le panneau : `analysis/runs/fr_cool_west_branch/end.state`, 110 038 images, même SHA256. Route : `route_cool_west_branch.json`.
+- Prototype courant : `analysis/runs/fr_cool_target_route/end.state`, 115 438 images, SHA256 `f1586ead9c5f1a95dcc8a5825c6bfe9a3190de59337f2e5fc7c338919135cc1c`. Vue : chemin dallé après un combat extérieur. Route complète : `route_cool_target.json`.
 
-Le workspace est `/workspace/scratch/872b8bba255b`. Les outils et le cœur sont dans `analysis/`, la copie publique dans `starocean/analysis/`. Ne jamais charger un état d’un autre SHA256. Toute nouvelle reconstruction impose une relecture depuis le reset pour la nouvelle cible.
+Workspace : `/workspace/scratch/872b8bba255b`. Cœur/pilotes dans `analysis/`, sources publiques dans `starocean/analysis/`. Charger uniquement un état du même SHA256 ; tout rebuild modifiant la cible impose une relecture depuis le reset pour cette cible.
 
-## Catalogue et outils
+## Navigation et limites
 
-30 267 clés : 1 976 observées sur l’original, 8 demandées par le prototype avec source physique déduite, 28 283 autres déduites/comparées. 70 PC observés, 110 hooks, gestionnaires DMA0/1 de 152 octets ; seul DMA0 a été exercé en jeu.
+Le guide de progression donne Cool au nord, puis la maison de Milly. Les chemins extérieurs ne sont pas des lignes droites : les tentatives de montée au nord et de passage par l'embranchement supérieur droit sont dans les routes, sans arrivée au village encore attestée. Ne pas annoncer Cool sur la seule présence de la mini-carte. Le point du panneau à 109 397 images évite de repartir du départ de Clatos.
 
-La routine autour de l’offset source 0x39900 lit deux blocs de 64 octets. La seconde adresse ajoute le déplacement Y+3 au premier pointeur. `derive_paired_dma_sources.py` récupère ces sources à partir d’ancrages figés, de la consommation du décodeur et de suites de deux entrées de neuf octets au minimum. `paired_dma_sources.json.gz` contient 16 032 entrées et 11 945 clés secondaires distinctes ; toutes ne sont pas observées en jeu.
+Les mêmes touches ne suffisent pas à synchroniser les deux ROMs après les combats. La route commune de 110 429 images passe les contrôles DMA, mais laisse le prototype à un autre endroit dans Clatos. Sa route distincte ajoute une correction pour sortir entre les deux cheminées au nord, puis un combat extérieur. À la sortie de Clatos, laisser finir la courte scène de dialogue avant de marcher.
 
-Le constructeur conserve les cases existantes avec `--lookup-slots lookup_slots.json.gz`. Après extension, ajouter `--write-lookup-slots lookup_slots.json.gz` et versionner le manifeste. Les 19 103 anciennes cases sont inchangées ; le prototype d’ouverture garde son SHA256 historique. Exécuter validate_catalog.py et le round-trip BPS après chaque reconstruction.
+## Correctif et catalogue
 
-Attention : un gel sur une source absente peut être masqué par NMI, PC 00:F9F9. L’ancienne continuation s’arrêtait ainsi sur F8:9E1B alors que les empreintes DMA précédentes passaient. Cette source est désormais intégrée par la règle des paires de deux entrées, et le comparateur détecte les sources DMA non résolues persistantes. S-DD1=false et absence d’échantillon au gestionnaire ne suffisent pas à valider un parcours.
+La lecture manquante F9:7029 venait d'une entrée de neuf octets suivie de trois octets nuls : premier pointeur F9:7015, déplacement 20, table à 0x69418. Le dériveur admet maintenant des entrées voisines séparées par ce terminateur nul. `cool_prior_stall_validation.json` conserve l'ancien échec masqué par NMI ; le contrôle des sources DMA non résolues persistantes le repère.
 
-## Suite
+30 578 clés : 2 274 observées sur l'original, 8 demandées par le prototype avec source physique déduite, 28 296 autres déduites/comparées. 72 PC observés, 110 hooks, gestionnaires DMA0/1 de 152 octets ; DMA1 n'est toujours pas exercé en jeu. Les longueurs cumulées sont 2 743 086 octets : conserver les maxima des DMA réellement demandés, pas uniquement l'adresse ou les 32/64 octets d'un match statique.
 
-1. Continuer la scène dorée sur l’original avec des attentes et confirmations courtes, relever le texte et la prochaine destination.
-2. Rejouer la même continuation sur le prototype du même SHA256 ; corriger le parcours si les timings divergent et conserver une route distincte si nécessaire.
-3. Poursuivre vers Cool, puis Metox et Calnus. Confirmer chaque scène à l’écran. Ne pas limiter le suivi aux empreintes : contrôler mouvements, dialogues, combats, effets et menus.
-4. Fusionner les traces et garder séparées observations originales, demandes du prototype et déductions statiques.
+Préserver `lookup_slots.json.gz` lors des reconstructions (`--lookup-slots ... --write-lookup-slots ...`). Recompiler sdd1.so si nécessaire ; le dériveur utilise SO_SDD1_input_span. Le catalogue, le BPS et les routes sont versionnés ; ni ROM, ni images de jeu, ni états ne doivent être publiés.
 
-Dernier bilan : 70 052 DMA redirigés, 1 914 tuples vérifiés, aucune erreur de décompression ni arrêt détecté ; 40 captures identiques sur 126, dont la dernière. La couverture du scénario entier, SRAM/sauvegarde de cartouche, chargement et matériel réel restent à établir. Les états instantanés ne prouvent pas la sauvegarde de cartouche.
+## Suite concrète
 
-Ne publier ni ROM, ni données graphiques extraites, ni états privés. Code, routes, métadonnées, empreintes et patches différentiels uniquement.
+1. Reprendre l'original au panneau ou à l'exploration alternative et atteindre réellement le village de Cool ; confirmer son nom et la scène de Milly à l'écran.
+2. Continuer aussi le prototype depuis son propre état à 115 438 images, avec une route distincte si nécessaire. Vérifier les contrôles et la progression visuelle, en plus des empreintes.
+3. Relever les cartes, combats, textes, menus et effets. Fusionner les nouveaux maxima de longueur et repérer les changements de source physique ; garder les déductions séparées des observations originales.
+4. Après chaque reconstruction : validate_catalog.py, round-trip BPS, puis replay de la nouvelle cible depuis le reset. SRAM/sauvegarde de cartouche, chargement et matériel restent à tester séparément des états instantanés.
+
+Bilans : replay commun 97 488 DMA et 1 963 tuples vérifiés ; continuation corrigée du prototype 10 311 DMA et 1 115 tuples. Les tuples des deux périmètres peuvent se recouper. Aucun arrêt ou erreur de décompression détecté dans ces contrôles. Le scénario complet reste à couvrir.

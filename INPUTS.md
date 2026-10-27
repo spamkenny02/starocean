@@ -26,7 +26,7 @@ python analysis/validate_catalog.py
 python analysis/make_bps_prototype.py --target FR_extended_experimental.sfc --output Star_Ocean_FR_extended_EXPERIMENTAL.bps
 ```
 
-SHA256 cible élargie : `9718581903ccf9cf74308ff611fdbecf6c5cb412f5a7b7b64c974a5ffe676e51`.
+SHA256 cible élargie : `f1586ead9c5f1a95dcc8a5825c6bfe9a3190de59337f2e5fc7c338919135cc1c`.
 
 Les outils `match_french_streams.py`, `align_pointer_contexts.py` et `merge_catalogs.py` servent à enrichir le catalogue à partir des données privées et des traces. Un bloc seulement déduit doit rester distinct d’un bloc exécuté. Les fichiers `route_menus.json` et `extended_callsites.json` figent les entrées et sites vérifiés pour ce jalon.
 
@@ -48,7 +48,7 @@ Dans une session interactive, `{"save":true}` écrit un état instantané et un 
 
 ## Sources DMA appariées et stabilité des recherches
 
-La routine française autour de l’offset source `0x39900` charge deux fois 64 octets : la première adresse provient des trois octets à Y, la seconde ajoute le déplacement à Y+3 à l’adresse basse, en conservant la banque CPU. Le script `derive_paired_dma_sources.py` vérifie la signature du code, la consommation du décodeur pour le premier bloc et des suites d’au moins deux entrées espacées de neuf octets. `paired_dma_anchors.json.gz` fige les adresses et sources utilisées comme ancrages ; aucune donnée graphique n’y figure. La régénération reproduit exactement `paired_dma_sources.json.gz`. Ces 11 945 sources secondaires sont des déductions statiques, pas autant de lectures exécutées.
+La routine française autour de l’offset source `0x39900` charge deux fois 64 octets : la première adresse provient des trois octets à Y, la seconde ajoute le déplacement à Y+3 à l’adresse basse, en conservant la banque CPU. Le script `derive_paired_dma_sources.py` vérifie la signature du code, la consommation du décodeur pour le premier bloc et des suites d’au moins deux entrées espacées de neuf octets. `paired_dma_anchors.json.gz` fige les adresses et sources utilisées comme ancrages ; aucune donnée graphique n’y figure. La régénération reproduit exactement `paired_dma_sources.json.gz`. Ces 12 277 sources secondaires sont des déductions statiques, pas autant de lectures exécutées.
 
 Recompiler `sdd1.so` avec le source fourni avant d’exécuter ce script : il expose maintenant `SO_SDD1_input_span`, uniquement pour l’analyse. `merge_catalogs.py` incorpore les déductions avec la priorité 3, les demandes du prototype avec la priorité 9 et les observations originales avec la priorité 10.
 
@@ -63,3 +63,18 @@ SO_CAPTURE_FRAMES=41526,45620,47495,50939,52744,56449,60819,64144,67377,70047,73
 SO_CAPTURE_FRAMES=41526,45620,47495,50939,52744,56449,60819,64144,67377,70047,73392,76941,80474,81599,85649 python analysis/run_headless.py analysis/FR_extended_experimental.sfc fr_chapter2_groups2 85650 analysis/route_chapter2.json
 python analysis/compare_replays.py analysis/runs/fr_chapter2_reference analysis/runs/fr_chapter2_groups2 --min-redirected 40000 --output analysis/story_validation.json
 ```
+
+## Lettre et chemin de Cool
+
+`route_cool.json` enregistre l’original jusqu’à 110 429 images. La même route de touches, rejouée depuis le reset sur le prototype, passe les contrôles DMA mais laisse le personnage à un autre endroit de Clatos. La route distincte `route_cool_target.json` ajoute une correction de déplacement puis un combat extérieur, terminé à 115 438 images. Les deux validations ont des périmètres différents : `cool_validation.json` porte le replay commun ; `cool_target_route_validation.json` porte uniquement la continuation depuis l’état du même SHA256 à 110 429 images.
+
+```sh
+SO_CAPTURE_FRAMES=85649,87934,94869,98669,100050,101780,104240,107271,109396,110428 python analysis/run_headless.py analysis/FR_extended_experimental.sfc fr_cool_new_patch 110429 analysis/route_cool.json
+python analysis/compare_replays.py analysis/runs/fr_cool_reference analysis/runs/fr_cool_new_patch --min-redirected 50000 --output analysis/cool_validation.json
+```
+
+La référence se reconstruit depuis le reset avec la ROM originale et `route_cool.json`, ou par continuation d’un état original du même SHA256. La route target complète se rejoue depuis le reset avec `route_cool_target.json` ; le relevé publié de sa continuation a été produit dans play_session.py depuis l’état courant à 110 429 images.
+
+Le format des tables appariées accepte maintenant aussi deux entrées séparées par trois octets nuls. Le cas contrôlé est l’entrée à `0x69418` : `$F9:7015` + 20 donne `$F9:7029`. Le filtre précédent ne retenait pas cette lecture. Les entrées restent des déductions statiques jusqu’à observation sur l’original.
+
+play_session.py conserve désormais `cpu_samples.json` après chaque commande, avec PC, touches et source/longueur DMA0. Les états enregistrent aussi leur frame de départ et les captures. Ces journaux facilitent la détection d’un arrêt masqué par NMI et distinguent une continuation d’un replay complet.

@@ -22,8 +22,8 @@ for i in range(0x8000,0xd0000-8):
  if physical<0x600000:candidates[i]={'table_offset':i,'first_pointer':first,'displacement':d,'second_pointer':second,'source_file':physical,'length':64,'decoder_read_span':spans[off]}
 accepted=[]
 for i,r in candidates.items():
- # At least two consecutive nine-byte entries; isolated pointer-like bytes fail.
- if any(all(j in candidates for j in [start,start+9]) for start in [i-9,i]):accepted.append(r)
+ # At least two neighboring nine-byte entries, with optional three-byte zero separators; isolated pointer-like bytes fail.
+ if i-9 in candidates or i+9 in candidates or (i-12 in candidates and source[i-3:i]==bytes(3)) or (i+12 in candidates and source[i+9:i+12]==bytes(3)):accepted.append(r)
 text=json.dumps(accepted,indent=2)+'\n'
 with gzip.GzipFile(filename=str(root/'paired_dma_sources.json.gz'),mode='wb',mtime=0) as z:z.write(text.encode())
 keys={r['second_pointer'] for r in accepted};expected={0xf64345,0xf42349,0xebc443,0xebc3d8,0xf2fd90,0xf2aca4,0xed4576,0xec3032}

@@ -1,10 +1,24 @@
 {
   "status": "static deduction, not proof of runtime coverage",
-  "accepted_table_entries": 16032,
-  "distinct_second_sources": 11945,
-  "known_missing_sources_recovered": 9,
+  "accepted_table_entries": 16482,
+  "distinct_second_sources": 12277,
+  "known_missing_sources_recovered": 10,
   "includes_masked_stall_source_f89e1b": true,
   "minimum_consecutive_entries": 2,
-  "paired_manifest_sha256": "ce07c51024663c7ffe1c5c258500fe8c0d616ce2597462c4489893fae4b426dc",
-  "regenerated_from_frozen_anchors_identically": true
+  "paired_manifest_sha256": "d463991fdd42b98339e6d532eb0cccc88aa19ba3e76af0c6d085a73d87554053",
+  "regenerated_from_frozen_anchors_identically": true,
+  "allows_three_zero_byte_separators": true,
+  "includes_letter_scene_source_f97029": true,
+  "known_missing_source_keys": [
+    "0xebc3d8",
+    "0xebc443",
+    "0xec3032",
+    "0xed4576",
+    "0xf2aca4",
+    "0xf2fd90",
+    "0xf42349",
+    "0xf64345",
+    "0xf89e1b",
+    "0xf97029"
+  ]
 }

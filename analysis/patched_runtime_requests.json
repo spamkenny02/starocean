@@ -62,5 +62,13 @@
     "length": 64,
     "method": "requested by patched Baird gameplay; physical source inferred from default page and adjacent verified sources; not observed on original",
     "priority": 9
+  },
+  {
+    "cpu_bank": 249,
+    "cpu_address": 28713,
+    "source_file": 3764265,
+    "length": 64,
+    "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
+    "priority": 9
   }
 ]

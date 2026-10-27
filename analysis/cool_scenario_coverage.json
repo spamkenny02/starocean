@@ -1,0 +1,52 @@
+{
+  "scope": "Manual scene confirmation in addition to DMA checks; no full story equivalence claimed",
+  "shared_input_route_reaches_different_positions": true,
+  "adapted_target_route": "route_cool_target.json",
+  "village_cool_reached": false,
+  "cartridge_save_load_tested": false,
+  "hardware_tested": false,
+  "captures": [
+    {
+      "scene": "epidemic_letter_original",
+      "run": "fr_cool_original",
+      "frame": 94870,
+      "png_sha256": "472aa975496c4248cfdc072a15f68feda23e2e18c457dfcdf149b22728d19ceb"
+    },
+    {
+      "scene": "letter_scene_target",
+      "run": "fr_cool_new_patch",
+      "frame": 94870,
+      "png_sha256": "8d442c40e000e4831bbada32e80643292fc364e1a9f686e8462c97d950fdd602"
+    },
+    {
+      "scene": "road_entry_original",
+      "run": "fr_cool_original",
+      "frame": 100051,
+      "png_sha256": "38c102924e58a8a602faaacd7818cdcc1606e22606b663b2d2bda4d1c5e71dfc"
+    },
+    {
+      "scene": "road_entry_target",
+      "run": "fr_cool_target_route",
+      "frame": 110743,
+      "png_sha256": "38c102924e58a8a602faaacd7818cdcc1606e22606b663b2d2bda4d1c5e71dfc"
+    },
+    {
+      "scene": "outdoor_battle_target",
+      "run": "fr_cool_target_route",
+      "frame": 112473,
+      "png_sha256": "47459cc656413b2133624e417d6bfd779d1d2788f31124d3da6a4c64b5b18db7"
+    },
+    {
+      "scene": "victory_level_up_target",
+      "run": "fr_cool_target_route",
+      "frame": 114838,
+      "png_sha256": "36b722955385c92e81b1bf6884adc22f6ff6f795c6a4fa2e0eaa5f03a6d0fd3a"
+    },
+    {
+      "scene": "return_to_road_target",
+      "run": "fr_cool_target_route",
+      "frame": 115438,
+      "png_sha256": "dc8fc63032a2b2c48df5188e020c7d3a251efc3e2c95008a38f9d2d51015957f"
+    }
+  ]
+}

@@ -80,3 +80,20 @@ Cette lecture est bien la seconde source d’une paire : premier pointeur `$F8:9
 La cible finale a été rejouée depuis le reset jusqu’à 85 650 images : **70 052 transferts redirigés**, **1 914 tuples source/longueur/empreinte** vérifiés sans erreur, aucun échantillon de boucle d’arrêt ni source DMA non résolue persistante, S-DD1 désactivé. Quarante empreintes de transfert ne figurent pas dans la route originale principale mais passent le contrôle indépendant par clé ; elles ne deviennent pas pour autant des observations sur l’original. Parmi 126 captures communes, 40 sont identiques, dont la vue finale dorée du QG. Le replay franchit Baird, la nuit, le réveil, le retour au QG et le dialogue avec l’ancien. La continuation exacte de la scène dorée reste à relever avant de nommer la suite.
 
 Les deux états privés à 85 650 images sont prêts pour poursuivre chacun avec son SHA256 propre. Le prochain jalon est la fin de cette scène puis le départ vers Cool. Aucune sauvegarde de cartouche, aucun chargement SRAM et aucun matériel réel n’ont été validés.
+
+
+## Lettre de l’épidémie et premiers combats sur le chemin de Cool
+
+La référence a couvert la fin de la scène du QG, la lettre annonçant l’épidémie, le départ de Milly, la sortie nord de Clatos, deux combats extérieurs et le dialogue avec Dorn sur le chemin. La mini-carte a été affichée. Le village de Cool n’est pas encore attesté : l’exploration s’arrête dans les chemins et embranchements.
+
+Un ancien replay du prototype s’arrêtait sur `$F9:7029`, 64 octets, juste avant la lettre. Le contrôle des sources DMA persistantes le signale même lorsque le PC est échantillonné dans NMI. Le premier pointeur `$F9:7015` et le déplacement 20 apparaissent à l’offset source `0x69418`, dans des entrées de neuf octets séparées par trois octets nuls. Le dériveur accepte maintenant ce séparateur contrôlé. Il retient 16 482 entrées et 12 277 sources secondaires distinctes, toujours classées comme déduites.
+
+Catalogue courant : **30 578 clés**, dont **2 274 observées sur l’original** (+298 depuis f70bd39), 8 demandes du prototype avec source physique déduite, et 28 296 autres déduites/comparées. +311 clés au total. Les longueurs de reconstruction cumulées passent à 2 743 086 octets (+143 360) : les nouvelles lectures de cartes et de combats nécessitaient aussi des extensions de longueur. Aucun conflit de source physique n’est recensé. 72 PC observés (+2 : `$C0:2E25`, `$C6:0E31`), couverts par les 110 hooks existants ; seul DMA0 est exercé en jeu.
+
+Cible : `f1586ead9c5f1a95dcc8a5825c6bfe9a3190de59337f2e5fc7c338919135cc1c`. Toutes les destinations du catalogue passent le validateur, distance de recherche maximale 211, et le BPS passe le round-trip avec les trois CRC.
+
+Le replay commun depuis le reset atteint 110 429 images : 97 488 transferts redirigés, 1 963 tuples source/longueur/empreinte sans erreur, aucun arrêt détecté. **Cela ne valide pas une progression de scénario identique** : la référence est dans les chemins, tandis que le prototype est encore dans Clatos. La scène de lecture de la lettre est toutefois présente sur les deux ROMs.
+
+Une continuation propre au prototype corrige ensuite la navigation. À 115 438 images, la sortie de Clatos, un combat extérieur contre le groupe avec loup-garou et lapins, la victoire, le passage de niveau et le retour au chemin sont attestés à l’écran. Sur cette continuation seule (départ 110 429) : 10 311 transferts redirigés, 1 115 tuples vérifiés sans erreur, aucun arrêt détecté et S-DD1 désactivé. Ne pas additionner les tuples distincts des deux périmètres comme s’ils étaient disjoints. Les empreintes des captures sont conservées sans publier les images.
+
+Un point original au panneau à 109 397 images a aussi été reconstruit par replay ; sa capture est identique au premier relevé. L’exploration alternative depuis ce point est conservée séparément. La prochaine action est d’achever la navigation vers Cool et d’y couvrir la scène de Milly. Sauvegarde/chargement de cartouche, matériel et scénario complet restent non validés.
