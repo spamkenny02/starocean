@@ -1,8 +1,20 @@
 # Reprise : lettre reçue et chemin de Cool
 
+## Blocage de reprise constaté le 28 octobre 2026
+
+L'inspection du workspace `/workspace/scratch/872b8bba255b` confirme l'absence des répertoires `upload/`, `analysis/` et `starocean/`. Les états privés ci-dessous décrivent les derniers points historiques ; ils ne sont plus disponibles dans cette exécution. Aucun nouveau parcours, transfert DMA, rebuild ou test n'a été exécuté le 28 octobre lors de ce constat.
+
+La ROM source exacte doit être remise à disposition dans ce workspace : `upload/Star Ocean FR.smc`, 6 291 456 octets, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Ne pas rechercher de fichiers privés ailleurs. Les sources, routes et catalogues publics sont récupérables depuis GitHub ; ils ne remplacent pas la ROM privée.
+
+Après restauration : vérifier le SHA256, récupérer les outils publics et le cœur Snes9x instrumenté indiqué dans INPUTS.md, reconstruire la cible avec les positions de lookup conservées, lancer validate_catalog.py et vérifier le round-trip BPS. En l'absence des anciens états, rejouer depuis le reset `route_cool.json` sur l'original et `route_cool_target.json` sur la cible. Vérifier les scènes à l'écran avant de continuer vers Cool ; charger uniquement un état du même SHA256. Aucun état instantané ne constitue une validation de sauvegarde de cartouche.
+
+Échéance visée : **29 octobre 2026 à 22 h, Europe/Paris**. Le scénario complet reste non validé. Le dernier bilan expérimental demeure celui du commit `babd6e580c54cb2086cbb9ddb40f80ab2ac73e38`.
+
+
+
 Cool n'est pas encore atteint. La lettre de l'épidémie, le départ de Milly, la sortie de Clatos et les premiers combats extérieurs sont maintenant relevés. Le prototype a terminé un combat extérieur, gagné un niveau et retrouvé le chemin après correction de son trajet.
 
-## États privés
+## Derniers états privés historiques — absents du workspace actuel
 
 - Original, exploration principale : `analysis/runs/fr_cool_original/end.state`, 110 429 images, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Route : `route_cool.json`.
 - Original, point du panneau restauré : `analysis/runs/fr_sign_checkpoint/end.state`, 109 397 images, même SHA256. La capture est identique au premier relevé. C'est un point pratique pour reprendre l'embranchement sans refaire les combats.

@@ -97,3 +97,14 @@ Le replay commun depuis le reset atteint 110 429 images : 97 488 transferts redi
 Une continuation propre au prototype corrige ensuite la navigation. À 115 438 images, la sortie de Clatos, un combat extérieur contre le groupe avec loup-garou et lapins, la victoire, le passage de niveau et le retour au chemin sont attestés à l’écran. Sur cette continuation seule (départ 110 429) : 10 311 transferts redirigés, 1 115 tuples vérifiés sans erreur, aucun arrêt détecté et S-DD1 désactivé. Ne pas additionner les tuples distincts des deux périmètres comme s’ils étaient disjoints. Les empreintes des captures sont conservées sans publier les images.
 
 Un point original au panneau à 109 397 images a aussi été reconstruit par replay ; sa capture est identique au premier relevé. L’exploration alternative depuis ce point est conservée séparément. La prochaine action est d’achever la navigation vers Cool et d’y couvrir la scène de Milly. Sauvegarde/chargement de cartouche, matériel et scénario complet restent non validés.
+
+
+## Blocage de reprise constaté le 28 octobre 2026
+
+L'inspection du workspace `/workspace/scratch/872b8bba255b` confirme l'absence des répertoires `upload/`, `analysis/` et `starocean/`. Les états privés ci-dessous décrivent les derniers points historiques ; ils ne sont plus disponibles dans cette exécution. Aucun nouveau parcours, transfert DMA, rebuild ou test n'a été exécuté le 28 octobre lors de ce constat.
+
+La ROM source exacte doit être remise à disposition dans ce workspace : `upload/Star Ocean FR.smc`, 6 291 456 octets, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Ne pas rechercher de fichiers privés ailleurs. Les sources, routes et catalogues publics sont récupérables depuis GitHub ; ils ne remplacent pas la ROM privée.
+
+Après restauration : vérifier le SHA256, récupérer les outils publics et le cœur Snes9x instrumenté indiqué dans INPUTS.md, reconstruire la cible avec les positions de lookup conservées, lancer validate_catalog.py et vérifier le round-trip BPS. En l'absence des anciens états, rejouer depuis le reset `route_cool.json` sur l'original et `route_cool_target.json` sur la cible. Vérifier les scènes à l'écran avant de continuer vers Cool ; charger uniquement un état du même SHA256. Aucun état instantané ne constitue une validation de sauvegarde de cartouche.
+
+Échéance visée : **29 octobre 2026 à 22 h, Europe/Paris**. Le scénario complet reste non validé. Le dernier bilan expérimental demeure celui du commit `babd6e580c54cb2086cbb9ddb40f80ab2ac73e38`.
