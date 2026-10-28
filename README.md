@@ -2,7 +2,7 @@
 
 Portage expérimental du mécanisme 96 Mbit vers la traduction française BadCompany. **Le jeu complet n’est pas encore couvert.**
 
-La version élargie contient 30 578 adresses sources, dont 2 274 observées pendant les relevés. Les routines des canaux DMA 0 et 1 sont implantées ; seul le canal 0 a été exercé par les parcours de jeu actuels. Le contrôle de recherche compare les 24 bits de l’adresse source afin d’éviter les collisions du premier prototype.
+La version élargie contient 30 579 adresses sources, dont 2 282 observées pendant les relevés. Les routines des canaux DMA 0 et 1 sont implantées ; seul le canal 0 a été exercé par les parcours de jeu actuels. Le contrôle de recherche compare les 24 bits de l’adresse source afin d’éviter les collisions du premier prototype.
 
 Le prototype passe Baird, la nuit, le réveil et les scènes suivantes, dont la lettre annonçant l’épidémie. Une route corrigée permet de sortir de Clatos et de terminer un combat extérieur, avec victoire, passage de niveau et retour au chemin. **Le village de Cool n’est pas encore atteint.** Les timings divergent : les mêmes touches peuvent laisser les deux ROMs à des endroits différents. [Couverture des scènes](analysis/cool_scenario_coverage.json) et [contrôles de la route corrigée](analysis/cool_target_route_validation.json).
 

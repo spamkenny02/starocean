@@ -1,0 +1,18 @@
+{
+  "scope": "Recovery and incremental extension; not complete scenario validation",
+  "original_checkpoint_png_sha256": "2786562277ab66519d6aa1569bb4b6e3934ac1ca3dc4b2d913834678e05596e0",
+  "target_final_png_sha256": "dc8fc63032a2b2c48df5188e020c7d3a251efc3e2c95008a38f9d2d51015957f",
+  "original_checkpoint_matches_historical": true,
+  "target_final_matches_historical": true,
+  "original_new_map_only": true,
+  "target_extension_reaches_different_position": true,
+  "cool_reached": false,
+  "cartridge_save_load_validated": false,
+  "discarded_unreadable_target_captures": [
+    58200,
+    66600
+  ],
+  "discarded_short_log_run": "fr_recovery_updated_target",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32"
+}

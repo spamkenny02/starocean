@@ -1,16 +1,24 @@
 # Reprise : lettre reçue et chemin de Cool
 
-## Blocage de reprise constaté le 28 octobre 2026
+## Reprise courante — 28 octobre, fichiers restaurés
 
-L'inspection du workspace `/workspace/scratch/872b8bba255b` confirme l'absence des répertoires `upload/`, `analysis/` et `starocean/`. Les états privés ci-dessous décrivent les derniers points historiques ; ils ne sont plus disponibles dans cette exécution. Aucun nouveau parcours, transfert DMA, rebuild ou test n'a été exécuté le 28 octobre lors de ce constat.
+La ROM exacte a été remise à disposition, SHA256 vérifié ; les sources et le cœur instrumenté sont restaurés. Le blocage décrit dans STATUS.md est historique. Les relances ont été réactivées. L'échéance visée reste le 29 octobre 2026 à 22 h Paris, sans couverture complète revendiquée.
 
-La ROM source exacte doit être remise à disposition dans ce workspace : `upload/Star Ocean FR.smc`, 6 291 456 octets, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Ne pas rechercher de fichiers privés ailleurs. Les sources, routes et catalogues publics sont récupérables depuis GitHub ; ils ne remplacent pas la ROM privée.
+Les fichiers de cette restauration sont dans `starocean/analysis/`, le cœur dans `analysis/snes9x/` (lien local depuis starocean/analysis/snes9x). Les états ci-dessous sont des états d'émulateur, pas des sauvegardes de cartouche :
 
-Après restauration : vérifier le SHA256, récupérer les outils publics et le cœur Snes9x instrumenté indiqué dans INPUTS.md, reconstruire la cible avec les positions de lookup conservées, lancer validate_catalog.py et vérifier le round-trip BPS. En l'absence des anciens états, rejouer depuis le reset `route_cool.json` sur l'original et `route_cool_target.json` sur la cible. Vérifier les scènes à l'écran avant de continuer vers Cool ; charger uniquement un état du même SHA256. Aucun état instantané ne constitue une validation de sauvegarde de cartouche.
+- Original au panneau : `starocean/analysis/runs/fr_restore_sign/end.state`, 109 397 images. Capture identique à l'ancienne ; point conseillé pour lire le panneau et reprendre la navigation.
+- Original, passage étroit : `starocean/analysis/runs/fr_cool_resume/end.state`, 113 265 ; route complète `analysis/route_cool_recovery.json`.
+- Original après le combat « Voleur rigolo » : `starocean/analysis/runs/fr_cool_branch2/end.state`, 116 527 ; route complète `analysis/route_cool_recovery_branch.json`. Vue : côté ouest d'un écran avec grande colonne centrale. Navigation non résolue, Cool absent.
+- Cible courante : `starocean/analysis/runs/fr_recovery_recheck/end.state`, 115 438, SHA256 `faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32` ; route `route_cool_target.json`, finale identique au jalon historique. C'est le replay retenu, 107 799 DMA vérifiés.
+- Cible, exploration distincte : `starocean/analysis/runs/fr_recovery_target_extension/end.state`, 124 303, même SHA256 ; route complète `route_recovery_target_extension.json`. Vue : rivière et chemin dallé. **N'a pas rejoint la nouvelle carte de l'original.** 2 513 DMA vérifiés sur cette seule continuation.
 
-Échéance visée : **29 octobre 2026 à 22 h, Europe/Paris**. Le scénario complet reste non validé. Le dernier bilan expérimental demeure celui du commit `babd6e580c54cb2086cbb9ddb40f80ab2ac73e38`.
+Catalogue : 30 579 clés, 2 282 observées, 72 PC observés, DMA0 seulement. Nouvelle source $ED:E9F4 sur 64 octets. Le patch gzip, les positions de lookup et le catalogue correspondent à la nouvelle cible ; les anciens états cible f1586e… ne doivent pas y être chargés.
 
+Prochaine action : lire le panneau sur l'original restauré, résoudre l'embranchement vers Cool, puis adapter la navigation depuis le propre état de la cible. Les tentatives par le couloir au pied de la colonne finissent dans un cul-de-sac. Ne pas annoncer de validation de cette carte sur la cible sur la seule réussite DMA d'un trajet divergent. Si les états disparaissent, reconstruire les routes depuis le reset avec leur SHA256 exact.
 
+Les contrôles courants sont `recovery_target_validation.json`, `recovery_extension_validation.json`, `recovery_observation_validation.json` et `recovery_scenario_coverage.json`. Deux captures tronquées ont été exclues du replay retenu ; le premier essai au journal tronqué n'est pas une validation.
+
+## Historique du point précédent
 
 Cool n'est pas encore atteint. La lettre de l'épidémie, le départ de Milly, la sortie de Clatos et les premiers combats extérieurs sont maintenant relevés. Le prototype a terminé un combat extérieur, gagné un niveau et retrouvé le chemin après correction de son trajet.
 

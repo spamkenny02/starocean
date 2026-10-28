@@ -1,0 +1,75 @@
+{
+  "unique_observations_checked": 941,
+  "transfers": 6947,
+  "decompression_hash_errors": 0,
+  "new_observed_keys": 8,
+  "new_catalog_keys": 1,
+  "reconstruction_bytes_added": 64,
+  "changed_records": [
+    {
+      "cpu_bank": 235,
+      "cpu_address": 24650,
+      "source_file": 2842698,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 235,
+      "cpu_address": 24711,
+      "source_file": 2842759,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 237,
+      "cpu_address": 59841,
+      "source_file": 3008961,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 237,
+      "cpu_address": 59892,
+      "source_file": 3009012,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 246,
+      "cpu_address": 63962,
+      "source_file": 3602906,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 246,
+      "cpu_address": 63990,
+      "source_file": 3602934,
+      "length": 64,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 249,
+      "cpu_address": 25953,
+      "source_file": 3761505,
+      "length": 32,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 251,
+      "cpu_address": 63246,
+      "source_file": 3929870,
+      "length": 32,
+      "method": "observed fr_cool_resume",
+      "priority": 10
+    }
+  ],
+  "scope": "Original continuation only: frames 109397 through 113265; Cool not reached"
+}

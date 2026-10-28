@@ -26,7 +26,7 @@ python analysis/validate_catalog.py
 python analysis/make_bps_prototype.py --target FR_extended_experimental.sfc --output Star_Ocean_FR_extended_EXPERIMENTAL.bps
 ```
 
-SHA256 cible élargie : `f1586ead9c5f1a95dcc8a5825c6bfe9a3190de59337f2e5fc7c338919135cc1c`.
+SHA256 cible élargie courante : `faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32`. Le SHA256 f1586e… cité dans les anciens bilans reste historique.
 
 Les outils `match_french_streams.py`, `align_pointer_contexts.py` et `merge_catalogs.py` servent à enrichir le catalogue à partir des données privées et des traces. Un bloc seulement déduit doit rester distinct d’un bloc exécuté. Les fichiers `route_menus.json` et `extended_callsites.json` figent les entrées et sites vérifiés pour ce jalon.
 
@@ -78,3 +78,18 @@ La référence se reconstruit depuis le reset avec la ROM originale et `route_co
 Le format des tables appariées accepte maintenant aussi deux entrées séparées par trois octets nuls. Le cas contrôlé est l’entrée à `0x69418` : `$F9:7015` + 20 donne `$F9:7029`. Le filtre précédent ne retenait pas cette lecture. Les entrées restent des déductions statiques jusqu’à observation sur l’original.
 
 play_session.py conserve désormais `cpu_samples.json` après chaque commande, avec PC, touches et source/longueur DMA0. Les états enregistrent aussi leur frame de départ et les captures. Ces journaux facilitent la détection d’un arrêt masqué par NMI et distinguent une continuation d’un replay complet.
+
+
+## Reprise après perte du workspace — 28 octobre
+
+La ROM rejointe sous `Star Ocean FR(1).smc` a exactement le SHA256 attendu. Un lien local `upload/Star Ocean FR.smc` rétablit le chemin des pilotes. Le dépôt public et le cœur Snes9x ont été restaurés ; la ROM anglaise et le patch anglais ne sont pas nécessaires pour reconstruire le catalogue déjà publié.
+
+Le fusionneur accepte maintenant une base publique et des traces originales explicitement choisies, sans dépendre des anciennes analyses privées :
+
+```sh
+python analysis/merge_catalogs.py --base analysis/catalog_extended.json.gz --trace analysis/runs/fr_cool_resume/sdd1.csv
+```
+
+Les chemins de `--base` et `--trace` sont relatifs au répertoire courant. Le script contrôle le SHA256 de provenance dans run.json, conserve les maxima de longueur et les priorités existantes, et refuse les conflits de sources physiques. Le contrôle indépendant des empreintes des relevés de cette reprise figure dans recovery_observation_validation.json. Ne pas lancer le mode historique sans base lorsque les analyses privées requises sont absentes.
+
+La route `route_cool_recovery.json` rejoint l'original à 113 265 images ; `route_cool_recovery_branch.json` prolonge jusqu'à 116 527. `route_recovery_target_extension.json` est une tentative distincte de navigation sur la cible, non une preuve d'équivalence de scénario. Les résultats courants sont dans recovery_target_validation.json et recovery_extension_validation.json.

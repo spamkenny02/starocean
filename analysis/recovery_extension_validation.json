@@ -1,0 +1,298 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32",
+  "frames": 124303,
+  "reference_frames": 113265,
+  "reference_start_frame": 109397,
+  "target_start_frame": 0,
+  "reference_transfers": 6947,
+  "reference_unique_cpu_sources": 931,
+  "reference_callsites": [
+    "c023ba",
+    "c023eb",
+    "c02e25",
+    "c20dcb",
+    "c20e0a",
+    "c281c8",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30579,
+  "catalog_observed_addresses": 2282,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28289,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 2513,
+  "minimum_redirected_required": 100,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 219,
+  "unknown_transfer_hash_pairs": [
+    {
+      "length": 64,
+      "fnv32": "0f2c8e26",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "199aef7a",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "1df55525",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "1eb1935f",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "207e53fb",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "21f98cdb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "257ffb97",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "26f3a0ea",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "2cc2aace",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "2f1a0c2a",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "33b0d490",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3a3060b9",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3bee3457",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "42afb000",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "4664cb7d",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "51da0d23",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "67863bd7",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "68ecf308",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "69e344a0",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "6f9fdb00",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "7d6b28bd",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "82e95e24",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "8be8df5a",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "8e24ea74",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "98cb80fa",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "9a453949",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "9db0471a",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "a4b19e95",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "ab7b95ba",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "bcf3d23b",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "bdfcb507",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c0f8182d",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "c149def6",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "c781b715",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "cb3895bb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d1152bc5",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "d2ed70e3",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "d35d80c0",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d4327f70",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "e015cbd0",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "e1cb1fa4",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "e7933501",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "e8cfc7e9",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "f33dc05e",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "f46718ef",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "f5546c73",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "f93bf45f",
+      "count": 1
+    }
+  ],
+  "target_unique_cpu_sources": 224,
+  "target_source_length_hash_checks": 224,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 16,
+  "image_comparisons": [],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true
+}
