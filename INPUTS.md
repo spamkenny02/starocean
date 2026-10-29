@@ -93,3 +93,14 @@ python analysis/merge_catalogs.py --base analysis/catalog_extended.json.gz --tra
 Les chemins de `--base` et `--trace` sont relatifs au répertoire courant. Le script contrôle le SHA256 de provenance dans run.json, conserve les maxima de longueur et les priorités existantes, et refuse les conflits de sources physiques. Le contrôle indépendant des empreintes des relevés de cette reprise figure dans recovery_observation_validation.json. Ne pas lancer le mode historique sans base lorsque les analyses privées requises sont absentes.
 
 La route `route_cool_recovery.json` rejoint l'original à 113 265 images ; `route_cool_recovery_branch.json` prolonge jusqu'à 116 527. `route_recovery_target_extension.json` est une tentative distincte de navigation sur la cible, non une preuve d'équivalence de scénario. Les résultats courants sont dans recovery_target_validation.json et recovery_extension_validation.json.
+
+
+## Contrôles possibles sans entrée privée
+
+```sh
+python analysis/audit_public_evidence.py
+python analysis/compose_route.py analysis/route_cool.json analysis/route_sign_front_continuation.json --checkpoint 109397 --output analysis/route_sign_front_from_reset.json
+python analysis/compose_route.py analysis/route_cool.json analysis/route_sign_neighbor_continuation.json --checkpoint 109397 --output analysis/route_sign_neighbor_from_reset.json
+```
+
+L'audit ne remplace ni validate_catalog.py sur les octets reconstruits, ni le round-trip BPS, ni les replays. Les fichiers `route_sign_*_from_reset.json` ne changent pas les touches des segments historiques ; leur nouvelle composition reste à rejouer avec la ROM exacte. Les métadonnées distinguent les clés historiquement observées des clés dont le relevé détaillé demeure publié.

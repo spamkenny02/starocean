@@ -1,0 +1,138 @@
+{
+  "scope": "Public metadata consistency only; no ROM, decompression or new gameplay validation",
+  "catalog_keys": 30579,
+  "catalog_observed_keys": 2282,
+  "observed_keys_with_public_records": 2267,
+  "observed_keys_without_public_records": [
+    {
+      "cpu_key": "E2:1C92",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "E3:3F6E",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F1:BEED",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F1:BF18",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F3:E121",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F3:E146",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F4:E5B7",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F4:E5D9",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F7:28AD",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F8:33BD",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F9:AC7D",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "F9:F897",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "FA:1EAC",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "FA:1EBE",
+      "historical_provenance": "observed fr_live"
+    },
+    {
+      "cpu_key": "FD:6CDD",
+      "historical_provenance": "observed fr_live"
+    }
+  ],
+  "catalog_priority_counts": {
+    "1": 8429,
+    "2": 8533,
+    "3": 11327,
+    "9": 8,
+    "10": 2282
+  },
+  "lookup_slots": 30579,
+  "max_lookup_probe_distance": 211,
+  "exported_callsite_count": 68,
+  "listed_callsite_count": 72,
+  "listed_callsites_without_exported_records": [
+    "C2FE2D",
+    "CA6899",
+    "CA68CB",
+    "CAE4F8"
+  ],
+  "exported_channels": [
+    0
+  ],
+  "evidence_files": [
+    {
+      "file": "observed_fr.json",
+      "sha256": "9ded9efebf3b9536d7c165fe8e1f9d9ded510a210b7973df42032f1a8aba5625",
+      "records": 571,
+      "unique_keys": 570
+    },
+    {
+      "file": "story_observed.json.gz",
+      "sha256": "1f471c7a100cf3d89a3b18dd6be0b953566f13a9d09c14724b88ac34023eafd9",
+      "records": 1804,
+      "unique_keys": 1728
+    },
+    {
+      "file": "baird_variant_observed.json.gz",
+      "sha256": "9402dcae782b886ed36871deaf0de9329ab252d458f41e8e9225185e95ce8e1e",
+      "records": 1428,
+      "unique_keys": 1378
+    },
+    {
+      "file": "chapter2_observed.json.gz",
+      "sha256": "e3109c81f74e1d90230db66d904a45183cf48b7616ddc8cd506655366e279271",
+      "records": 2021,
+      "unique_keys": 1945
+    },
+    {
+      "file": "cool_observed.json.gz",
+      "sha256": "db79dc1888a52a2c5e22cc237b90ad48d184b38fefe127f78b0b8563c056843c",
+      "records": 2355,
+      "unique_keys": 2243
+    },
+    {
+      "file": "recovery_observed.json.gz",
+      "sha256": "b1a70a7481f3f751c259dc5d7a9b4fecc3437684327cce5dcf326bde08d2737e",
+      "records": 941,
+      "unique_keys": 931
+    },
+    {
+      "file": "recovery_branch_observed.json.gz",
+      "sha256": "15acca06d46bd7e36d78371dd83547a1c805f5994ba67f36970db9fb8c28ecad",
+      "records": 602,
+      "unique_keys": 594
+    }
+  ],
+  "consistency_checks_passed": true,
+  "caveats": [
+    "Historical observed classifications without exported records are retained, not newly verified.",
+    "Files can contain overlapping runs: their record/transfer counts must not be added as independent coverage.",
+    "Hash syntax is checked; decompressed bytes cannot be checked without the exact source ROM."
+  ]
+}

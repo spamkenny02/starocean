@@ -140,3 +140,16 @@ Le diagnostic de navigation en lisant une structure d'acteur à l'offset WRAM 0x
 Prochaine action nécessaire : rétablir `upload/Star Ocean FR.smc` (6 291 456 octets, SHA256 ci-dessus), cloner le dernier main, reconstruire le cœur et la cible, valider catalogue et round-trip BPS, puis reconstruire les points depuis les routes publiques. Les chemins privés de la section précédente sont historiques et actuellement absents. Reprendre ensuite la navigation vers Cool et sa validation sur le propre état de la cible. Les sauvegardes de cartouche restent distinctes des états d'émulateur ; aucune validation SRAM nouvelle.
 
 Le travail est bloqué par l'absence de l'entrée privée, et non achevé. L'échéance du 29 octobre à 22 h Paris reste une cible non atteinte.
+
+
+## Audit public du 29 octobre — sans ROM
+
+Le dépôt a été restauré à 4fa021c. La ROM française reste absente ; aucun nouveau parcours, bloc exécuté, rebuild ou round-trip BPS n'a été effectué lors de cet audit. Le catalogue et le patch publiés ne sont pas modifiés.
+
+`analysis/audit_public_evidence.py` contrôle les métadonnées conservées : 30 579 clés et positions de lookup uniques, aucun trou sur les chaînes de recherche, distance maximale 211. Chaque observation détaillée exportée retrouve la même source physique, une longueur suffisante et la priorité observée dans le catalogue. Aucune contradiction constatée. Ce contrôle ne décompresse aucun octet et ne revalide pas les empreintes sur la ROM.
+
+Sur les 2 282 clés historiquement classées observées, **2 267 ont un relevé détaillé dans les fichiers publics**, et **15 ne conservent que leur provenance historique `observed fr_live`**. La liste figure dans public_evidence_audit.json ; ces quinze clés ne sont ni déclassées ni considérées comme nouvellement vérifiées. Les exports détaillés couvrent 68 des 72 PC de la liste observée. Les quatre PC sans relevé détaillé exporté sont C2:FE2D, CA:6899, CA:68CB et CA:E4F8. Les 72 PC de cette liste ne doivent pas être confondus avec les 110 remplacements implantés dans la ROM. Seul DMA0 apparaît dans ces exports. Les exports peuvent se recouper : ne pas additionner leurs compteurs comme des parcours indépendants.
+
+Les deux continuations du panneau sont maintenant aussi disponibles avec leur préfixe complet depuis le reset : route_sign_front_from_reset.json (111 942 images) et route_sign_neighbor_from_reset.json (109 561). `compose_route.py` coupe proprement le préfixe à 109 397 et y joint les intervalles absolus de la continuation. L'égalité des masques de touches a été contrôlée pour chaque image avec les segments publiés ; les bornes et le refus des recouvrements/masques invalides ont été vérifiés. Une chaîne de lookup volontairement cassée a été rejetée par l'auditeur. **Ces contrôles de composition ne sont pas une nouvelle exécution en émulateur.**
+
+Le blocage de scénario reste l'absence de la ROM exacte. Après son rétablissement : contrôler son SHA256, reconstruire/valider la cible, rejouer les routes depuis le reset et reprendre vers Cool. Réexporter les observations correspondant aux quinze clés et quatre PC historiques lorsqu'ils sont réexercés. Cool, Metox, Calnus et la couverture complète ne sont pas validés.

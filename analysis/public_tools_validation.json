@@ -1,0 +1,8 @@
+{
+  "scope": "ROM-free metadata and route composition only",
+  "full_route_masks_preserved": true,
+  "checkpoint_crossing_interval_clipped": true,
+  "wrong_checkpoint_invalid_mask_and_overlap_rejected": true,
+  "broken_lookup_chain_rejected": true,
+  "rom_or_emulator_tested": false
+}

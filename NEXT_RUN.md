@@ -1,5 +1,8 @@
 # Reprise après nouvelle perte du workspace
 
+Dernier travail du 29 octobre : audit ROM-free dans `analysis/public_evidence_audit.json`. Les routes complètes `analysis/route_sign_front_from_reset.json` et `analysis/route_sign_neighbor_from_reset.json` sont prêtes pour une reprise depuis le reset ; leur composition a été vérifiée, pas rejouée. La ROM manque toujours. Aucun compteur de scénario nouveau.
+
+
 ## Nouvelle perte du workspace — 28 octobre 2026
 
 Une maintenance a de nouveau supprimé les fichiers locaux, y compris la pièce jointe française remise à disposition le matin, le cœur compilé et les états. La vérification après maintenance confirme leur absence et les sessions interactives ne sont plus accessibles. Aucun accès de lecture permettant de restaurer la pièce jointe n'est exposé ici ; ne pas chercher de fichiers privés dans d'autres espaces.
