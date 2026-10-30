@@ -1,0 +1,7 @@
+{
+  "start_frame": 129651,
+  "end_frame": 129711,
+  "rom_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "expected_start_matches_input_state": true,
+  "scope": "Real same-ROM continuation metadata check; no additional scenario progress claimed."
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "bps_sha256": "1cf83679a784405b5df37df5ab57d372982c516cc77563c11cc3a7927162a71b",
+  "bps_gzip_sha256": "040448929ec36d352661e762d6d453680c7e89aa7a7b53dc317b6399224f1a12",
+  "bps_size": 6262266,
+  "bps_round_trip_byte_equal": true,
+  "three_crcs_verified": true,
+  "gzip_contains_verified_patch": true
+}

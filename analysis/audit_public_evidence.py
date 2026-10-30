@@ -11,6 +11,7 @@ EVIDENCE = [
     'observed_fr.json', 'story_observed.json.gz', 'baird_variant_observed.json.gz',
     'chapter2_observed.json.gz', 'cool_observed.json.gz',
     'recovery_observed.json.gz', 'recovery_branch_observed.json.gz',
+    'oct29_observed.json.gz',
 ]
 
 

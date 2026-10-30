@@ -1,0 +1,104 @@
+{
+  "status": "experimental; incomplete scenario",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "original_end_frame": 131767,
+  "original_scene": "Cool entered; infected old man; arrival scene; Maltos and Milly house dialogue; ongoing Dorn/Milly dialogue outside. No completed return to Clatos claimed.",
+  "target_end_frame": 129651,
+  "target_scene": "Village Cool title visibly displayed at the entrance; Maltos/Milly house scene not yet replayed on target.",
+  "target_continuous_segments": [
+    {
+      "label": "fr_oct29_rebuilt_target",
+      "start_frame": 0,
+      "end_frame": 121900,
+      "transfers": 115999
+    },
+    {
+      "label": "fr_oct29_target_cool",
+      "start_frame": 121900,
+      "end_frame": 126266,
+      "transfers": 7801
+    },
+    {
+      "label": "fr_oct29_target_cool_live",
+      "start_frame": 126266,
+      "end_frame": 126627,
+      "transfers": 224
+    },
+    {
+      "label": "fr_oct29_target_village",
+      "start_frame": 126627,
+      "end_frame": 127858,
+      "transfers": 1005
+    },
+    {
+      "label": "fr_oct29_target_battle",
+      "start_frame": 127858,
+      "end_frame": 129478,
+      "transfers": 4546
+    },
+    {
+      "label": "fr_oct30_target_resume",
+      "start_frame": 129478,
+      "end_frame": 129651,
+      "transfers": 168
+    }
+  ],
+  "redirected_transfers_across_disjoint_segments": 129743,
+  "distinct_key_length_fnv32_union": 2333,
+  "catalog_keys": 30588,
+  "catalog_observed": 2343,
+  "new_catalog_keys": 9,
+  "previously_inferred_keys_promoted": 52,
+  "new_observed_callsite_pcs": 0,
+  "listed_observed_pcs": 72,
+  "static_hook_replacements": 110,
+  "exercised_channels": [
+    0
+  ],
+  "original_scene_pngs": [
+    {
+      "frame": 117274,
+      "sha256": "70ba8a478fd849fb771e4fd930cd1a0597157c5327d1a79b2734a102a9717926"
+    },
+    {
+      "frame": 117654,
+      "sha256": "58e3047528d362220180f576cf6a23352f42ca58c8242302d046c5bcef20cba4"
+    },
+    {
+      "frame": 122360,
+      "sha256": "d237b420eca25680227a668e5e410dd7a4a578a5f029c9f38b26537ce0603d61"
+    },
+    {
+      "frame": 122827,
+      "sha256": "0f2ae8895f01b8a9bdbc17a87038a558f359bd137df737e3be431fba319b885b"
+    },
+    {
+      "frame": 127847,
+      "sha256": "28facb85fa4fbdfdb47c05a04469840a9ad6da82716121f906e09210118cb27e"
+    },
+    {
+      "frame": 131767,
+      "sha256": "13a3c4248a7771af90af132149b36c8e24b9effe3d87a8d99af332453c0bded1"
+    }
+  ],
+  "target_scene_pngs": [
+    {
+      "frame": 129651,
+      "sha256": "344b937302aad563cee4d92c26bd06204021dd4866d1a63044d8cdd0dcf5e696"
+    }
+  ],
+  "unvalidated": [
+    "Remainder of scenario",
+    "Metox and Calnus",
+    "Cartridge SRAM save/load",
+    "DMA1 in game",
+    "Real hardware"
+  ],
+  "caveats": [
+    "Source routes compose executed same-ROM continuations; the final composed original route has not had a new full reset replay.",
+    "Target prefix was replayed from reset to 121900; subsequent segments used states of the same target SHA256. The final full composed target route has not been rerun in one uninterrupted process.",
+    "Distinct tuples are a union of disjoint target traces; overlapping branch counts are not added.",
+    "Emulator states are private and are not cartridge saves."
+  ]
+}

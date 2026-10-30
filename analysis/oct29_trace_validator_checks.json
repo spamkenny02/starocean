@@ -1,0 +1,5 @@
+{
+  "real_original_trace_passed": true,
+  "mutated_fnv32_detected": true,
+  "wrong_rom_provenance_rejected": true
+}

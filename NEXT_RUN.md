@@ -1,3 +1,17 @@
+# Point de reprise courant — 30 octobre 2026
+
+Les fichiers privés sont actuellement présents. Les sections plus bas décrivent l'historique et des points parfois perdus ; cette section fait foi pour la reprise courante.
+
+- Original : `analysis/runs/fr_oct29_tablet/end.state`, **131 767**, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Cool, scène chez Maltos/Milly couverte ; dialogue extérieur de Dorn et Milly encore ouvert. Finir cette scène, vérifier le retour effectif à Clatos et reprendre le départ vers Metox. Route depuis le reset : `analysis/route_oct29_cool_original.json` (composition de segments exécutés, pas un nouveau replay intégral d'un seul tenant).
+- Cible : `analysis/runs/fr_oct30_target_resume/end.state`, **129 651**, SHA256 `eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0`. Titre « Village Cool » visible à l'entrée. Rejouer d'abord l'homme infecté, l'arrivée de Milly puis la maison de Maltos, en adaptant les déplacements. Route complète : `analysis/route_oct29_cool_target.json`. Ne charger aucun état de faa3735e… dans cette cible.
+- Contrôle technique supplémentaire : `analysis/runs/fr_oct30_metadata_check/end.state`, 129 711, même SHA cible ; simple attente de 60 images destinée à vérifier `start_frame`, pas un nouveau jalon de scénario.
+
+Catalogue : 30 588 clés, 2 343 observées, neuf ajouts et 52 promotions depuis 178f919 ; 72 PC observés, 110 hooks, DMA0 seulement. L'ancien arrêt CF:8A5D / 24 576 octets est corrigé et franchi en replay depuis le reset. Validations : `oct29_rebuilt_target_validation.json`, `oct30_target_*_validation.json`, `oct30_bps_validation.json`, `oct30_cool_scenario_coverage.json`.
+
+En cas de perte d'états, reconstruire les routes depuis le reset avec la ROM et le SHA correspondants. Les états ci-dessus sont des états instantanés d'émulateur ; aucune validation de sauvegarde de cartouche n'en découle. Ni Metox, ni Calnus, ni le scénario entier ne sont validés. Aucun nouveau cycle autonome ne doit présenter la cible de calendrier comme accomplie.
+
+---
+
 # Reprise après nouvelle perte du workspace
 
 Dernier travail du 29 octobre : audit ROM-free dans `analysis/public_evidence_audit.json`. Les routes complètes `analysis/route_sign_front_from_reset.json` et `analysis/route_sign_neighbor_from_reset.json` sont prêtes pour une reprise depuis le reset ; leur composition a été vérifiée, pas rejouée. La ROM manque toujours. Aucun compteur de scénario nouveau.

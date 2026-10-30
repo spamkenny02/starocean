@@ -1,0 +1,203 @@
+{
+  "scope": "Separate original-ROM branches; counts overlap and are not a single scenario route.",
+  "runs": [
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "220f6f8c3e58a8e40cffb0eb1b9688303fd4c168c6034d2ba7708718e579b2d3",
+      "frames": 112738,
+      "start_frame": 109397,
+      "transfers": 6017,
+      "unique_records": 992,
+      "unique_cpu_keys": 982,
+      "independent_source_length_hash_checks": 982,
+      "callsites": [
+        "c023ba",
+        "c023eb",
+        "c02e25",
+        "c20dcb",
+        "c20e0a",
+        "c281c8",
+        "c391c4",
+        "c3922c",
+        "c3924a",
+        "c3993b",
+        "c39957",
+        "c60aa4",
+        "c60aff",
+        "c60b57",
+        "c60de1",
+        "c60e31"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_crossroad"
+    },
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "7a354787801b2febe5705264b63b01d34c73c861d09f1c406ffd77ea93b8c8a8",
+      "frames": 112854,
+      "start_frame": 112738,
+      "transfers": 124,
+      "unique_records": 105,
+      "unique_cpu_keys": 105,
+      "independent_source_length_hash_checks": 105,
+      "callsites": [
+        "c20dcb",
+        "c20e0a",
+        "c391c4",
+        "c3922c",
+        "c3924a"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_candidate"
+    },
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "424b7801ef58b8e9fd775383d3e2eaac2bff4e1c0e1ea8ca886cb32893e3aab5",
+      "frames": 115379,
+      "start_frame": 112854,
+      "transfers": 2175,
+      "unique_records": 554,
+      "unique_cpu_keys": 542,
+      "independent_source_length_hash_checks": 542,
+      "callsites": [
+        "c023ba",
+        "c023eb",
+        "c02e25",
+        "c20dcb",
+        "c20e0a",
+        "c281c8",
+        "c391c4",
+        "c3922c",
+        "c3924a",
+        "c3993b",
+        "c39957",
+        "c60aa4",
+        "c60aff",
+        "c60b57",
+        "c60de1",
+        "c60e31"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_bridge_restore"
+    },
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "487e9ae4567569bee94296b4772b0f82e9a09d528ebf764d005452c2a2392553",
+      "frames": 118050,
+      "start_frame": 115379,
+      "transfers": 3085,
+      "unique_records": 686,
+      "unique_cpu_keys": 676,
+      "independent_source_length_hash_checks": 676,
+      "callsites": [
+        "c023ba",
+        "c023eb",
+        "c02e25",
+        "c20dcb",
+        "c20e0a",
+        "c281c8",
+        "c391c4",
+        "c3922c",
+        "c3924a",
+        "c3993b",
+        "c39957",
+        "c60aa4",
+        "c60aff",
+        "c60b57",
+        "c60de1",
+        "c60e31"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_north"
+    },
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "079711f625e77f531bf34421f6d56b8defc9030a93fb55d2516e98333437a786",
+      "frames": 112908,
+      "start_frame": 112738,
+      "transfers": 140,
+      "unique_records": 89,
+      "unique_cpu_keys": 89,
+      "independent_source_length_hash_checks": 89,
+      "callsites": [
+        "c20dcb",
+        "c20e0a",
+        "c391c4",
+        "c3922c",
+        "c3924a",
+        "c60aff",
+        "c60de1",
+        "c60e31"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_north_exit"
+    },
+    {
+      "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "trace_sha256": "9701f95c47238d5ced69dfcfb226c1f3fc471fd27d8dacc26111d218534a43e6",
+      "frames": 131767,
+      "start_frame": 112908,
+      "transfers": 8461,
+      "unique_records": 924,
+      "unique_cpu_keys": 916,
+      "independent_source_length_hash_checks": 916,
+      "callsites": [
+        "c023ba",
+        "c023eb",
+        "c02e25",
+        "c20dcb",
+        "c20e0a",
+        "c20e49",
+        "c281c8",
+        "c391c4",
+        "c3922c",
+        "c3924a",
+        "c3993b",
+        "c39957",
+        "c60aa4",
+        "c60aff",
+        "c60b57",
+        "c60de1",
+        "c60e31"
+      ],
+      "channels": [
+        0
+      ],
+      "decompression_errors": [],
+      "physical_source_conflicts": [],
+      "checks_passed": true,
+      "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation.",
+      "label": "fr_oct29_tablet"
+    }
+  ]
+}

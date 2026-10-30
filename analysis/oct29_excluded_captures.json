@@ -1,0 +1,16 @@
+{
+  "target": [],
+  "original": [
+    {
+      "frame": 28800,
+      "reason": "Truncated PNG, excluded from comparisons.",
+      "sha256": "525414719d03d2f7eaf16aa614e5afd0abeadde0710b8b8ead8df85720f0f12e"
+    }
+  ],
+  "other_original_captures_not_used": [
+    {
+      "frame": 127727,
+      "reason": "Invalid PNG; no visual conclusion or hash quoted from this image."
+    }
+  ]
+}

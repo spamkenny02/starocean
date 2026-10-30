@@ -65,4 +65,4 @@ core.retro_serialize_size.restype=C.c_size_t
 state_size=core.retro_serialize_size();state_buffer=C.create_string_buffer(state_size);core.retro_serialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_serialize.restype=C.c_bool
 assert core.retro_serialize(state_buffer,state_size);(outdir/'end.state').write_bytes(state_buffer.raw)
 core.retro_unload_game();core.retro_deinit()
-(outdir/'run.json').write_text(json.dumps({'rom':rompath.name,'rom_sha256':hashlib.sha256(b).hexdigest(),'frames':frames,'captures':captures,'pixel_format':pixel},indent=2));print('completed',frames,'frames',captures)
+(outdir/'run.json').write_text(json.dumps({'rom':rompath.name,'rom_sha256':hashlib.sha256(b).hexdigest(),'frames':frames,'start_frame':baseframe,'captures':captures,'pixel_format':pixel},indent=2));print('completed',frames,'frames',captures)

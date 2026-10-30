@@ -16,6 +16,15 @@ Les scripts exploratoires des étapes antérieures demandent aussi la ROM anglai
 
 Le cœur de test est Snes9x au commit `1bcc369e89f08243e0a462882fb1f3e42e51de3a`. Le patch d’instrumentation et le pilote headless sont inclus. Le pilote demande numpy et Pillow.
 
+Ce commit appartient au dépôt amont `https://github.com/snes9xgit/snes9x.git` (il n'est pas présent dans le miroir `libretro/snes9x` testé lors de la restauration). Depuis la racine de ce projet :
+
+```sh
+git clone https://github.com/snes9xgit/snes9x.git analysis/snes9x
+git -C analysis/snes9x checkout 1bcc369e89f08243e0a462882fb1f3e42e51de3a
+git -C analysis/snes9x apply ../snes9x_port_test.patch
+make -C analysis/snes9x/libretro -j2 LTO= CXX=g++ CC=gcc
+```
+
 Le code du décompresseur conserve sa licence Snes9x. Aucune licence globale nouvelle n’est attribuée aux contenus tiers.
 
 ## Reconstruction élargie
@@ -26,7 +35,7 @@ python analysis/validate_catalog.py
 python analysis/make_bps_prototype.py --target FR_extended_experimental.sfc --output Star_Ocean_FR_extended_EXPERIMENTAL.bps
 ```
 
-SHA256 cible élargie courante : `faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32`. Le SHA256 f1586e… cité dans les anciens bilans reste historique.
+SHA256 cible élargie courante : `eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0`. Le SHA256 faa3735e… reste historique. Le SHA256 f1586e… cité dans les anciens bilans reste historique.
 
 Les outils `match_french_streams.py`, `align_pointer_contexts.py` et `merge_catalogs.py` servent à enrichir le catalogue à partir des données privées et des traces. Un bloc seulement déduit doit rester distinct d’un bloc exécuté. Les fichiers `route_menus.json` et `extended_callsites.json` figent les entrées et sites vérifiés pour ce jalon.
 
@@ -104,3 +113,14 @@ python analysis/compose_route.py analysis/route_cool.json analysis/route_sign_ne
 ```
 
 L'audit ne remplace ni validate_catalog.py sur les octets reconstruits, ni le round-trip BPS, ni les replays. Les fichiers `route_sign_*_from_reset.json` ne changent pas les touches des segments historiques ; leur nouvelle composition reste à rejouer avec la ROM exacte. Les métadonnées distinguent les clés historiquement observées des clés dont le relevé détaillé demeure publié.
+
+
+## Relevés de Cool — 29–30 octobre
+
+`route_oct29_cool_original.json` compose les segments originaux réellement exécutés jusqu'à 131 767 images. `route_oct29_cool_target.json` compose le reset et les continuations propres à la cible jusqu'à l'entrée de Cool à 129 651. Ces fichiers ne prouvent pas un second replay intégral d'un seul tenant. `route_oct29_river_original.json` conserve séparément l'exploration de la rive est ; `route_oct29_target_missing.json` garde les touches de l'ancien échec sur faa3735e… à CF:8A5D. Les références de ROM et périmètres figurent dans `oct30_cool_scenario_coverage.json` et NEXT_RUN.md.
+
+```sh
+python analysis/validate_original_trace.py analysis/runs/fr_oct29_tablet/sdd1.csv --output analysis/runs/fr_oct29_tablet/independent_validation.json
+```
+
+Le validateur original exige le SHA exact, vérifie indépendamment chaque empreinte source/longueur et refuse les conflits physiques. Il ne certifie pas la progression visuelle. `run_headless.py` écrit désormais `start_frame` pour distinguer un lancement depuis le reset d'une continuation. Le champ des anciens relevés de cette reprise a été complété depuis les commandes connues ; les états restent privés et ne sont pas des sauvegardes SRAM.

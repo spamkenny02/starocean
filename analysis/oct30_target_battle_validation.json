@@ -1,0 +1,1182 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "frames": 129478,
+  "reference_frames": 131767,
+  "reference_start_frame": 112908,
+  "target_start_frame": 127858,
+  "reference_transfers": 8461,
+  "reference_unique_cpu_sources": 916,
+  "reference_callsites": [
+    "c023ba",
+    "c023eb",
+    "c02e25",
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30588,
+  "catalog_observed_addresses": 2343,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28237,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 4546,
+  "minimum_redirected_required": 1,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 763,
+  "unknown_transfer_hash_pairs": [
+    {
+      "length": 32,
+      "fnv32": "05468fa1",
+      "count": 7
+    },
+    {
+      "length": 32,
+      "fnv32": "07321da5",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "07d8c00f",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "161665e0",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "19bf7423",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "1bfbd85a",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "2172b198",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "41907f8f",
+      "count": 3
+    },
+    {
+      "length": 32,
+      "fnv32": "4894582c",
+      "count": 8
+    },
+    {
+      "length": 32,
+      "fnv32": "5a86c405",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "5b7bcb01",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "5fb629c5",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "60ab7fdf",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "7630599b",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "8430b3de",
+      "count": 8
+    },
+    {
+      "length": 32,
+      "fnv32": "84a96cc3",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "90d18034",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "9a1c0a25",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "9dfa2899",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "a119167d",
+      "count": 8
+    },
+    {
+      "length": 32,
+      "fnv32": "acfa77f5",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "ae16b4dd",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "afea9b38",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "b1b9e425",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "b3304b60",
+      "count": 3
+    },
+    {
+      "length": 32,
+      "fnv32": "b91b9170",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "c6e4906f",
+      "count": 9
+    },
+    {
+      "length": 32,
+      "fnv32": "ce774f5c",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "ced262b8",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "d5a4e745",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "da42daa6",
+      "count": 8
+    },
+    {
+      "length": 32,
+      "fnv32": "dce3f114",
+      "count": 9
+    },
+    {
+      "length": 32,
+      "fnv32": "e02396e4",
+      "count": 1
+    },
+    {
+      "length": 32,
+      "fnv32": "e34bff1d",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "e48cec8c",
+      "count": 2
+    },
+    {
+      "length": 32,
+      "fnv32": "f08c8d6b",
+      "count": 7
+    },
+    {
+      "length": 32,
+      "fnv32": "f1c366ef",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "008b3809",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "015c12b8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "03248eb8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "04d7b745",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "0735347c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "089f9988",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "09196a6d",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "094c55c3",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "0f251c28",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "0f4b6215",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "104690ff",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "10fca1d5",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "130464db",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "130974c9",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "143fe547",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "155c276d",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "172bef73",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "175d7fab",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "1875d808",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "19006eeb",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "19a98d3e",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "1b469afe",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "1d3d64ba",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "2024561d",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "223266f9",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "231e8465",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "2322055f",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "24d2f51c",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "24dd59f7",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "253fcb59",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "27b282f9",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "2a1951d4",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "2aab0a4b",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "2c8c7e90",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "3106798c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "31f60b0a",
+      "count": 9
+    },
+    {
+      "length": 64,
+      "fnv32": "320f6ae8",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "33ae47ab",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3477faac",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "356c9bda",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "3586d9c2",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "379f9d7c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "39390736",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "3a677445",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3a9f7afb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3b295605",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3b5932ed",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "3dc32842",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "3deb225b",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "416f7397",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "4355cfe6",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "45ba2de2",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "47c128da",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "485bcac7",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "48656da7",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "48a50e61",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "48c68200",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "4d4d33f1",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "4e1b4a32",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "501631d9",
+      "count": 9
+    },
+    {
+      "length": 64,
+      "fnv32": "50afbf82",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "548f7723",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "54a77b9d",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "56bc7059",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "56c01adb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "584a426b",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "5997af97",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "59d761e5",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "5afca521",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "5c8974fd",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "5e169ccc",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "5e3e07c3",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "5fac5f66",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "61cc6766",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "63ada010",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "64667655",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "67f1d11d",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "68c7e7c6",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "69f6c4c5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "6a08ff30",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "6a93ee99",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "6af78fb2",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "6b53b5ab",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "6bd3c7f1",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "6cd3293e",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "6d03c71f",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "6e9e03b9",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "7080bf34",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "708302ff",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "71d33d75",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "73f6ac6c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "763288a8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "7806d5dd",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "789e34e3",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "7a2ed64a",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "7ac9df9c",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "7b91ba15",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "7cac5518",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "7ce19f52",
+      "count": 79
+    },
+    {
+      "length": 64,
+      "fnv32": "7d79e833",
+      "count": 9
+    },
+    {
+      "length": 64,
+      "fnv32": "7e766f54",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "7e8c3a58",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "80111f75",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "845050fe",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "853aeaf3",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "85a44d34",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "87360ee1",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "88531a03",
+      "count": 9
+    },
+    {
+      "length": 64,
+      "fnv32": "88b427b4",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "891cee59",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "8b480dc3",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "8c087b66",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "9420c6ae",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "95e6e0b5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "978bbf81",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "97a9052e",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "97ac080f",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "9999384d",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "9bfdf2ef",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "9e5285bf",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "9f9580e1",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "a26c404d",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "a2aae711",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ab40d68c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ab75e417",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "abdc7b07",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ad5f0798",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ad6eb0dc",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "af3381a8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "b10a2481",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "b210128a",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "b2e50a91",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "b4cf19e8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "b6e1ff37",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "b816f295",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "b81bae6a",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ba4193c5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "babc03c2",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "bacc84c8",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "bcdc8603",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "bd8e8d50",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "c0c17678",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c1982da5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c1e69d42",
+      "count": 79
+    },
+    {
+      "length": 64,
+      "fnv32": "c2417d6a",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c2890b49",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "c2ae3e97",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c49d2699",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c8082605",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "c8f54e65",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "cc209715",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "cdd9e20a",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "d1ff7702",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d33ea184",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "d3f085fb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d403b469",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d83dd950",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "d88f5943",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d9d53f94",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "da10fee1",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "dc9e4059",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "df29962d",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "df8db332",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "e07937f1",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "e145c08e",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "e21099cf",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "e572727b",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "e71154da",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "eb829e18",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "ebb328f3",
+      "count": 7
+    },
+    {
+      "length": 64,
+      "fnv32": "ed827629",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "f04c1c21",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "f08a2d00",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "f37daa45",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "f73b27c5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "f7446631",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "f74d3aa4",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "f858272d",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "fa06a549",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "fa684ed8",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "fbc5c2fd",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "fca65cf4",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "ff92ba2e",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "fff30c39",
+      "count": 1
+    }
+  ],
+  "target_unique_cpu_sources": 782,
+  "target_source_length_hash_checks": 782,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 84,
+  "image_comparisons": [
+    {
+      "frame": 128400,
+      "pixel_identical": false,
+      "reference_png_sha256": "06cb19a36556b76ab6eeecc088e392f23c9e6e89f681ac0bb2c148ac4c530848",
+      "target_png_sha256": "575ce47d0613813b94ddb0a3f61fcaaa96c46e278951ff95fb243a55ec0553f6"
+    },
+    {
+      "frame": 129000,
+      "pixel_identical": false,
+      "reference_png_sha256": "4e53e388cd8730405c23ca4658dca30a7cca0bbf439e1415588b3795210bbda5",
+      "target_png_sha256": "eaef2e5959e037121037609a44e24f46260b7b005b555d026817c3abc424b87f"
+    }
+  ],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true
+}

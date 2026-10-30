@@ -1,0 +1,14 @@
+{
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32",
+  "catalog_streams_verified": 30579,
+  "max_lookup_probe_distance": 211,
+  "bps_size": 6262266,
+  "bps_round_trip_equal": true,
+  "bps_three_crcs_verified": true,
+  "published_bps_equal": true,
+  "core_commit": "1bcc369e89f08243e0a462882fb1f3e42e51de3a",
+  "core_repository": "https://github.com/snes9xgit/snes9x.git",
+  "instrumentation": "analysis/snes9x_port_test.patch",
+  "scope": "Restored build only; replays recorded separately."
+}

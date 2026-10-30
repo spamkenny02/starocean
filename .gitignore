@@ -25,3 +25,6 @@ analysis/routine_port_extended.json
 analysis/catalog_conflicts.json
 analysis/matched_french_streams.json
 analysis/aligned_pointer_contexts.json
+
+# Temporary copies of private ROM images
+analysis/.*.sfc.*

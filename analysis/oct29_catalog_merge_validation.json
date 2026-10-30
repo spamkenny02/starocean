@@ -1,0 +1,1109 @@
+{
+  "before_keys": 30579,
+  "after_keys": 30588,
+  "before_observed": 2282,
+  "after_observed": 2343,
+  "total_reconstruction_bytes": 2775918,
+  "changes": [
+    {
+      "key": "CF8A5D",
+      "before": null,
+      "after": {
+        "cpu_bank": 207,
+        "cpu_address": 35421,
+        "source_file": 1018461,
+        "length": 24576,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E778AB",
+      "before": null,
+      "after": {
+        "cpu_bank": 231,
+        "cpu_address": 30891,
+        "source_file": 2586795,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E795C4",
+      "before": null,
+      "after": {
+        "cpu_bank": 231,
+        "cpu_address": 38340,
+        "source_file": 2594244,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E7E31E",
+      "before": null,
+      "after": {
+        "cpu_bank": 231,
+        "cpu_address": 58142,
+        "source_file": 2614046,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E828D4",
+      "before": null,
+      "after": {
+        "cpu_bank": 232,
+        "cpu_address": 10452,
+        "source_file": 2631892,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E83131",
+      "before": null,
+      "after": {
+        "cpu_bank": 232,
+        "cpu_address": 12593,
+        "source_file": 2634033,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E83FAD",
+      "before": null,
+      "after": {
+        "cpu_bank": 232,
+        "cpu_address": 16301,
+        "source_file": 2637741,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E841B8",
+      "before": null,
+      "after": {
+        "cpu_bank": 232,
+        "cpu_address": 16824,
+        "source_file": 2638264,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "E845D4",
+      "before": null,
+      "after": {
+        "cpu_bank": 232,
+        "cpu_address": 17876,
+        "source_file": 2639316,
+        "length": 1024,
+        "method": "observed fr_oct29_north_exit",
+        "priority": 10
+      }
+    },
+    {
+      "key": "ED122A",
+      "before": {
+        "cpu_bank": 237,
+        "cpu_address": 4650,
+        "source_file": 2953770,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 237,
+        "cpu_address": 4650,
+        "source_file": 2953770,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "ED1260",
+      "before": {
+        "cpu_bank": 237,
+        "cpu_address": 4704,
+        "source_file": 2953824,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 237,
+        "cpu_address": 4704,
+        "source_file": 2953824,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "EF1275",
+      "before": {
+        "cpu_bank": 239,
+        "cpu_address": 4725,
+        "source_file": 3084917,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 239,
+        "cpu_address": 4725,
+        "source_file": 3084917,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "EF12A5",
+      "before": {
+        "cpu_bank": 239,
+        "cpu_address": 4773,
+        "source_file": 3084965,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 239,
+        "cpu_address": 4773,
+        "source_file": 3084965,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "EFD60B",
+      "before": {
+        "cpu_bank": 239,
+        "cpu_address": 54795,
+        "source_file": 3134987,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 239,
+        "cpu_address": 54795,
+        "source_file": 3134987,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "EFD639",
+      "before": {
+        "cpu_bank": 239,
+        "cpu_address": 54841,
+        "source_file": 3135033,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 239,
+        "cpu_address": 54841,
+        "source_file": 3135033,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F12945",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 10565,
+        "source_file": 3221829,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 10565,
+        "source_file": 3221829,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F12972",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 10610,
+        "source_file": 3221874,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 10610,
+        "source_file": 3221874,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F16468",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 25704,
+        "source_file": 3236968,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 25704,
+        "source_file": 3236968,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F16494",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 25748,
+        "source_file": 3237012,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 25748,
+        "source_file": 3237012,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F18672",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 34418,
+        "source_file": 3245682,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 34418,
+        "source_file": 3245682,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F1869E",
+      "before": {
+        "cpu_bank": 241,
+        "cpu_address": 34462,
+        "source_file": 3245726,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 241,
+        "cpu_address": 34462,
+        "source_file": 3245726,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F31EB5",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 7861,
+        "source_file": 3350197,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 7861,
+        "source_file": 3350197,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F31EDC",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 7900,
+        "source_file": 3350236,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 7900,
+        "source_file": 3350236,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F38044",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 32836,
+        "source_file": 3375172,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 32836,
+        "source_file": 3375172,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F3806A",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 32874,
+        "source_file": 3375210,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 32874,
+        "source_file": 3375210,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F3E7E6",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 59366,
+        "source_file": 3401702,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 59366,
+        "source_file": 3401702,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F3E80B",
+      "before": {
+        "cpu_bank": 243,
+        "cpu_address": 59403,
+        "source_file": 3401739,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 243,
+        "cpu_address": 59403,
+        "source_file": 3401739,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F44E59",
+      "before": {
+        "cpu_bank": 244,
+        "cpu_address": 20057,
+        "source_file": 3427929,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 244,
+        "cpu_address": 20057,
+        "source_file": 3427929,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F44E7D",
+      "before": {
+        "cpu_bank": 244,
+        "cpu_address": 20093,
+        "source_file": 3427965,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 244,
+        "cpu_address": 20093,
+        "source_file": 3427965,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F4DE18",
+      "before": {
+        "cpu_bank": 244,
+        "cpu_address": 56856,
+        "source_file": 3464728,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 244,
+        "cpu_address": 56856,
+        "source_file": 3464728,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F4DE3A",
+      "before": {
+        "cpu_bank": 244,
+        "cpu_address": 56890,
+        "source_file": 3464762,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 244,
+        "cpu_address": 56890,
+        "source_file": 3464762,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6145D",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 5213,
+        "source_file": 3544157,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 5213,
+        "source_file": 3544157,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6147C",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 5244,
+        "source_file": 3544188,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 5244,
+        "source_file": 3544188,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F668AA",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 26794,
+        "source_file": 3565738,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 26794,
+        "source_file": 3565738,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F668C8",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 26824,
+        "source_file": 3565768,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 26824,
+        "source_file": 3565768,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F668FD",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 26877,
+        "source_file": 3565821,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 26877,
+        "source_file": 3565821,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6691B",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 26907,
+        "source_file": 3565851,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 26907,
+        "source_file": 3565851,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6C1BD",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 49597,
+        "source_file": 3588541,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 49597,
+        "source_file": 3588541,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6C1DA",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 49626,
+        "source_file": 3588570,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 49626,
+        "source_file": 3588570,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6C211",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 49681,
+        "source_file": 3588625,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 49681,
+        "source_file": 3588625,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F6C22E",
+      "before": {
+        "cpu_bank": 246,
+        "cpu_address": 49710,
+        "source_file": 3588654,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 246,
+        "cpu_address": 49710,
+        "source_file": 3588654,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7867A",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 34426,
+        "source_file": 3638906,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 34426,
+        "source_file": 3638906,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7D31F",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 54047,
+        "source_file": 3658527,
+        "length": 64,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 54047,
+        "source_file": 3658527,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7D339",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 54073,
+        "source_file": 3658553,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 54073,
+        "source_file": 3658553,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7E2DB",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 58075,
+        "source_file": 3662555,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 58075,
+        "source_file": 3662555,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F83967",
+      "before": {
+        "cpu_bank": 248,
+        "cpu_address": 14695,
+        "source_file": 3684711,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 248,
+        "cpu_address": 14695,
+        "source_file": 3684711,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F83980",
+      "before": {
+        "cpu_bank": 248,
+        "cpu_address": 14720,
+        "source_file": 3684736,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 248,
+        "cpu_address": 14720,
+        "source_file": 3684736,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FA785F",
+      "before": {
+        "cpu_bank": 250,
+        "cpu_address": 30815,
+        "source_file": 3831903,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 250,
+        "cpu_address": 30815,
+        "source_file": 3831903,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FA7870",
+      "before": {
+        "cpu_bank": 250,
+        "cpu_address": 30832,
+        "source_file": 3831920,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 250,
+        "cpu_address": 30832,
+        "source_file": 3831920,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FAA14E",
+      "before": {
+        "cpu_bank": 250,
+        "cpu_address": 41294,
+        "source_file": 3842382,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 250,
+        "cpu_address": 41294,
+        "source_file": 3842382,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FAA15E",
+      "before": {
+        "cpu_bank": 250,
+        "cpu_address": 41310,
+        "source_file": 3842398,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 250,
+        "cpu_address": 41310,
+        "source_file": 3842398,
+        "length": 64,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FAE116",
+      "before": {
+        "cpu_bank": 250,
+        "cpu_address": 57622,
+        "source_file": 3858710,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 250,
+        "cpu_address": 57622,
+        "source_file": 3858710,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB157F",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 5503,
+        "source_file": 3872127,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 5503,
+        "source_file": 3872127,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB4870",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 18544,
+        "source_file": 3885168,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 18544,
+        "source_file": 3885168,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB7CC9",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 31945,
+        "source_file": 3898569,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 31945,
+        "source_file": 3898569,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FBA7FE",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 43006,
+        "source_file": 3909630,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 43006,
+        "source_file": 3909630,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FBE701",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 59137,
+        "source_file": 3925761,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 59137,
+        "source_file": 3925761,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FBE70A",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 59146,
+        "source_file": 3925770,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 59146,
+        "source_file": 3925770,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FBF918",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 63768,
+        "source_file": 3930392,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 63768,
+        "source_file": 3930392,
+        "length": 32,
+        "method": "observed fr_oct29_tablet",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FC7331",
+      "before": {
+        "cpu_bank": 252,
+        "cpu_address": 29489,
+        "source_file": 3961649,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 252,
+        "cpu_address": 29489,
+        "source_file": 3961649,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FC7336",
+      "before": {
+        "cpu_bank": 252,
+        "cpu_address": 29494,
+        "source_file": 3961654,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 252,
+        "cpu_address": 29494,
+        "source_file": 3961654,
+        "length": 64,
+        "method": "observed fr_oct29_crossroad",
+        "priority": 10
+      }
+    }
+  ],
+  "physical_conflicts": [],
+  "incremental_merge_idempotent": true,
+  "old_lookup_slots_preserved": 30579,
+  "new_lookup_keys": 9
+}
