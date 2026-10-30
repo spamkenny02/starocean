@@ -70,5 +70,13 @@
     "length": 64,
     "method": "requested by patched gameplay; physical page inferred from original observations in the same CPU bank; new key not observed on original",
     "priority": 9
+  },
+  {
+    "cpu_bank": 250,
+    "cpu_address": 58973,
+    "source_file": 3860061,
+    "length": 64,
+    "method": "requested by patched departure combat; physical page inferred from adjacent catalog sources; paired table at source offset 0xb1ca9 holds FA:E64F plus 14; not observed on original",
+    "priority": 9
   }
 ]

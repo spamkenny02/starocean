@@ -1,0 +1,34 @@
+{
+  "old_keys": 30588,
+  "new_keys": 30590,
+  "old_observed": 2352,
+  "new_observed": 2488,
+  "added": [
+    {
+      "cpu_bank": 250,
+      "cpu_address": 32569,
+      "source_file": 3833657,
+      "length": 64,
+      "method": "observed fr_oct30_departure_reference_recheck",
+      "priority": 10
+    },
+    {
+      "cpu_bank": 250,
+      "cpu_address": 58973,
+      "source_file": 3860061,
+      "length": 64,
+      "method": "observed fr_oct30_departure_reference_recheck",
+      "priority": 10
+    }
+  ],
+  "promoted_count": 134,
+  "length_extensions": 0,
+  "physical_conflicts": [],
+  "new_observed_callsites": [
+    "c02f15"
+  ],
+  "observed_callsite_count": 73,
+  "static_hooks": 110,
+  "merge_idempotent": true,
+  "original_evidence": "oct30_departure_observed.json.gz"
+}

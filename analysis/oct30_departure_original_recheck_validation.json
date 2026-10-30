@@ -1,0 +1,39 @@
+{
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "trace_sha256": "814eb405b523574e85e888cde0de05c10c20dce63a20913bda3cb00af207a1de",
+  "frames": 154943,
+  "start_frame": 141936,
+  "transfers": 13074,
+  "unique_records": 1073,
+  "unique_cpu_keys": 1025,
+  "independent_source_length_hash_checks": 1025,
+  "callsites": [
+    "c023ba",
+    "c023eb",
+    "c02f15",
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c2fe89",
+    "c2fea7",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c39550",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "channels": [
+    0
+  ],
+  "decompression_errors": [],
+  "physical_source_conflicts": [],
+  "checks_passed": true,
+  "caveat": "Recorded transfers only; no visual, SRAM, hardware or complete scenario validation."
+}

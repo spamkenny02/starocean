@@ -1,3 +1,18 @@
+# Reprise prioritaire — sortie de Clatos, combat corrigé
+
+Le 30 octobre, les deux versions ont couvert le dialogue de départ avec Dorn/Milly et la sortie nord de Clatos. Le combat suivant est franchi sur la nouvelle cible depuis le reset. **Metox et Calnus restent à atteindre.** Cette section remplace les reprises historiques plus bas.
+
+- Original : `analysis/runs/fr_oct30_departure_reference_recheck/end.state`, **154 943**, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Chemin au nord du premier panneau, près de la végétation à droite, après combat. Route complète : `analysis/route_oct30_departure_original.json` ; nouveau segment rejoué depuis l'état original 141 936.
+- Cible : `analysis/runs/fr_oct30_departure_final/end.state`, **168 591**, SHA256 `9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963`. Chemin légèrement au sud du premier panneau, combat terminé. Route `analysis/route_oct30_departure_target.json`, réellement rejouée depuis le reset d'un seul tenant. Aucun état eda13e6d… ou 0b939cef… ne convient à cette ROM.
+
+Prochaine action : reprendre le panneau et résoudre la direction de Metox sur l'original, puis adapter la cible à partir de son propre point. Le chemin à l'ouest mène à Cool, déjà couvert ; l'embranchement supérieur droit exploré auparavant était un cul-de-sac. Utiliser le guide si nécessaire, mais valider toute nouvelle carte à l'écran. Ne pas confondre la scène où Dorn parle des vers de montagne avec une arrivée effective au mont Metox.
+
+L'arrêt FA:E65D / 64 octets est corrigé, confirmé sur l'original avec FA:7F39. Catalogue 30 590 clés, 2 488 observées, +2 clés/+134 promotions, +1 PC observé C0:2F15 (73 au total), 110 hooks inchangés, DMA0 seulement. Validation cible : 164 257 transferts et 2 540 tuples contrôlés, sans arrêt et sans S-DD1. Catalogue et round-trip BPS trois CRC passent. Voir `analysis/oct30_departure_scenario_coverage.json`.
+
+Les volumes et positions peuvent différer entre replays : l'original retenu donne 13 074 transferts, l'exploration interactive 4 181 ; cause non établie, ne pas sommer. Seule la référence retenue est exportée. Ces états sont des instantanés d'émulateur, pas une validation SRAM. Si les états disparaissent, reconstruire par les routes publiques avec les SHA exacts. Objectif complet inachevé, échéance dépassée.
+
+---
+
 # Reprise prioritaire — Maltos terminé, équipe Ratix–Milly à Clatos
 
 Dernier jalon du 30 octobre : les deux ROMs ont couvert Maltos/Milly à Cool, les échanges de Dorn/Milly, le retour à Clatos et l'équipe Ratix–Milly au menu. Metox et Calnus ne sont pas encore atteints. Cette section remplace les points de reprise historiques ci-dessous.

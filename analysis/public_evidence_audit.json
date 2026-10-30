@@ -1,8 +1,8 @@
 {
   "scope": "Public metadata consistency only; no ROM, decompression or new gameplay validation",
-  "catalog_keys": 30588,
-  "catalog_observed_keys": 2352,
-  "observed_keys_with_public_records": 2337,
+  "catalog_keys": 30590,
+  "catalog_observed_keys": 2488,
+  "observed_keys_with_public_records": 2473,
   "observed_keys_without_public_records": [
     {
       "cpu_key": "E2:1C92",
@@ -66,16 +66,16 @@
     }
   ],
   "catalog_priority_counts": {
-    "1": 8404,
-    "2": 8521,
-    "3": 11303,
+    "1": 8353,
+    "2": 8488,
+    "3": 11253,
     "9": 8,
-    "10": 2352
+    "10": 2488
   },
-  "lookup_slots": 30588,
+  "lookup_slots": 30590,
   "max_lookup_probe_distance": 211,
-  "exported_callsite_count": 68,
-  "listed_callsite_count": 72,
+  "exported_callsite_count": 69,
+  "listed_callsite_count": 73,
   "listed_callsites_without_exported_records": [
     "C2FE2D",
     "CA6899",
@@ -139,6 +139,12 @@
       "sha256": "c42d9c427f655329c75497028bab074f289585916e0a60265c5f7a107ee7642d",
       "records": 461,
       "unique_keys": 448
+    },
+    {
+      "file": "oct30_departure_observed.json.gz",
+      "sha256": "e004596f9789f76fb9d7ce4eadc983c48ecab39e2ee2510199d5f5134f47544c",
+      "records": 1073,
+      "unique_keys": 1025
     }
   ],
   "consistency_checks_passed": true,

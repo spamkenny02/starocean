@@ -1,0 +1,19 @@
+{
+  "failed_target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "missing_key": "fae65d",
+  "length": 64,
+  "trap_pc": "648096",
+  "first_trap_sample": 166466,
+  "last_sample": 168591,
+  "source_table_offset": "0xb1ca9",
+  "first_pointer": "fae64f",
+  "secondary_displacement": 14,
+  "secondary_key": "fae65d",
+  "source_file_confirmed_on_original": "0x3ae65d",
+  "original_fnv32": "2ccd05d0",
+  "original_callsite": "c3924a",
+  "reference_trace": "fr_oct30_departure_reference_recheck",
+  "physical_provenance": "Originally inferred for diagnosis, now confirmed on original ROM by independent FNV validation.",
+  "other_new_original_key": "fa7f39",
+  "scope": "One recorded combat request; not full scenario or complete table coverage."
+}

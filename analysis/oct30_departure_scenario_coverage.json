@@ -1,0 +1,86 @@
+{
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963",
+  "current_scene": "Departure from Clatos, Dorn/Milly dialogue, northern forest and combat; Metox not reached",
+  "original_retained_run": "fr_oct30_departure_reference_recheck",
+  "original_range": [
+    141936,
+    154943
+  ],
+  "original_transfers": 13074,
+  "target_retained_run": "fr_oct30_departure_final",
+  "target_range": [
+    0,
+    168591
+  ],
+  "target_redirected_transfers": 164257,
+  "target_independent_key_length_fnv_checks": 2540,
+  "target_dma_checks_passed": true,
+  "catalog": {
+    "keys": 30590,
+    "observed": 2488,
+    "requested_only": 8,
+    "other_inferred": 28094,
+    "added_keys": 2,
+    "promoted_existing": 134,
+    "observed_pc_count": 73,
+    "new_observed_pc": "c02f15",
+    "static_hooks": 110,
+    "gameplay_channels": [
+      0
+    ]
+  },
+  "proof_png_metadata_only": [
+    {
+      "run": "fr_oct30_metox_original",
+      "frame": 143764,
+      "scene": "Milly asks Dorn whether he is well at the north exit",
+      "png_sha256": "f2d959848ae1233b3c3826f9b5477b95a7ad7c2500f54a22e74748746337d346"
+    },
+    {
+      "run": "fr_oct30_metox_original",
+      "frame": 146704,
+      "scene": "Dorn warns about mountain worms",
+      "png_sha256": "79f3755e0fd0f40b2cb0fb5f3453e9c1e22ed598dc3f32281df8fd384425f6d2"
+    },
+    {
+      "run": "fr_oct30_departure_reference_recheck",
+      "frame": 154943,
+      "scene": "Original after battle on northern forest road; not Metox",
+      "png_sha256": "00ccac723ab75caa97cd1ad829ace5a7966ad4aeca27e8fa94fc2e3fae29e657"
+    },
+    {
+      "run": "fr_oct30_departure_final",
+      "frame": 138000,
+      "scene": "Maltos house replayed",
+      "png_sha256": "f370637624307f091dcb0856a26ec3154ae551138ef6b8d3dc7d6fa7ec9ff58b"
+    },
+    {
+      "run": "fr_oct30_departure_final",
+      "frame": 160200,
+      "scene": "Dorn-Milly departure dialogue",
+      "png_sha256": "73f9f16f0bd8d290193e9d34fb07e488839631aefcab4e67cc16ef7becaf3050"
+    },
+    {
+      "run": "fr_oct30_departure_final",
+      "frame": 166200,
+      "scene": "Battle with Petit lap; Ratix, Milly and Dorn visible",
+      "png_sha256": "2453e214c5422d7e91b5fce7e533cb256db575100f0950ab06522395b80529a3"
+    },
+    {
+      "run": "fr_oct30_departure_final",
+      "frame": 168591,
+      "scene": "Return to forest road after battle; not Metox",
+      "png_sha256": "67e1f264c8af2cab7f48228dbd34e81aeae878c46aab6dff7a1141b6aec5bff0"
+    }
+  ],
+  "limits": [
+    "Full scenario incomplete; Metox and Calnus not reached",
+    "SRAM save/load not tested; recorded states are emulator snapshots",
+    "DMA1 and real hardware not validated",
+    "Interactive original journal 4181 transfers differs from retained replay 13074; final positions differ. Cause not established; alternatives not added.",
+    "Old target eda13e6d\u2026 stalls at FA:E65D; final target resets and passes.",
+    "Intermediate target 0b939cef\u2026 replay interrupted during prior scenes and is not a validated target.",
+    "No universal frame or transfer determinism claimed."
+  ]
+}

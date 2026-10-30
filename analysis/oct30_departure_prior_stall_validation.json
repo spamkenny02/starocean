@@ -1,0 +1,202 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "frames": 168591,
+  "reference_frames": 151943,
+  "reference_start_frame": 141936,
+  "target_start_frame": 163244,
+  "reference_transfers": 4181,
+  "reference_unique_cpu_sources": 242,
+  "reference_callsites": [
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c2fe89",
+    "c2fea7",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c60aff",
+    "c60b57",
+    "c60de1"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30588,
+  "catalog_observed_addresses": 2352,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28228,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 545,
+  "minimum_redirected_required": 1,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 56,
+  "unknown_transfer_hash_pairs": [
+    {
+      "length": 64,
+      "fnv32": "108d9765",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "13841e38",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "2390feae",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "39e517f1",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "4547ba13",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "473b2428",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "642bf6f6",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "6770e82c",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "7b24a8fd",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "809ea120",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "b16bc9b2",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "c07190ff",
+      "count": 3
+    },
+    {
+      "length": 64,
+      "fnv32": "eeb9b30d",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "f10b3590",
+      "count": 10
+    },
+    {
+      "length": 64,
+      "fnv32": "fba30fee",
+      "count": 10
+    },
+    {
+      "length": 1024,
+      "fnv32": "0c284fab",
+      "count": 30
+    },
+    {
+      "length": 1024,
+      "fnv32": "0ff753f6",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "13cbe3d9",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "301c1cd0",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "5d2c54fa",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "654cafe1",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "90fe77f3",
+      "count": 31
+    },
+    {
+      "length": 1024,
+      "fnv32": "acd4a138",
+      "count": 30
+    },
+    {
+      "length": 2048,
+      "fnv32": "bcc178f1",
+      "count": 1
+    },
+    {
+      "length": 3584,
+      "fnv32": "1e493eda",
+      "count": 1
+    },
+    {
+      "length": 16384,
+      "fnv32": "bd652ce7",
+      "count": 1
+    },
+    {
+      "length": 24576,
+      "fnv32": "dd30efe3",
+      "count": 1
+    }
+  ],
+  "target_unique_cpu_sources": 57,
+  "target_source_length_hash_checks": 57,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 19,
+  "trap_dma_sources": [
+    "0xfae65d"
+  ],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 76,
+  "image_comparisons": [],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [
+    {
+      "source": "0xfae65d",
+      "length": 64,
+      "samples": 35
+    }
+  ],
+  "dma_checks_passed": false
+}

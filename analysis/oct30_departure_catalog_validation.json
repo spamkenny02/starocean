@@ -1,0 +1,12 @@
+{
+  "streams_verified": 30590,
+  "max_lookup_probe_distance": 211,
+  "target_sha256": "9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963",
+  "channels_implemented": [
+    0,
+    1
+  ],
+  "gameplay_channels_observed": [
+    0
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963",
+  "frames": 168591,
+  "reference_frames": 154943,
+  "reference_start_frame": 141936,
+  "target_start_frame": 0,
+  "reference_transfers": 13074,
+  "reference_unique_cpu_sources": 1025,
+  "reference_callsites": [
+    "c023ba",
+    "c023eb",
+    "c02f15",
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c2fe89",
+    "c2fea7",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c39550",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30590,
+  "catalog_observed_addresses": 2488,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28094,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 164257,
+  "minimum_redirected_required": 100000,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 2443,
+  "target_unique_cpu_sources": 2539,
+  "target_source_length_hash_checks": 2540,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 281,
+  "image_comparisons": [
+    {
+      "frame": 142200,
+      "pixel_identical": false,
+      "reference_png_sha256": "8289c223b50f16ec53ac68b4425f47302c082995c07fbfc1e7ecc11d1b7dc377",
+      "target_png_sha256": "10c3c1164f10aaf2b5ab9986eb25b65eee5a9efcd8e0be3c8e304abb4a1982bc"
+    },
+    {
+      "frame": 142800,
+      "pixel_identical": false,
+      "reference_png_sha256": "348c353c19e6f194d4b9c44c0a69ecc945ea9071a4b65b217e6f5db150f1dd31",
+      "target_png_sha256": "c02e6b23c3c8cd5acfc51ddc20fdaa8b10e79bcc1c0e5c1bdd40d14d3ddd39b2"
+    },
+    {
+      "frame": 143400,
+      "pixel_identical": false,
+      "reference_png_sha256": "254025779428a180db2c3dbee85af4fb97fe3a4b1add9be1e3c2f855ada67d61",
+      "target_png_sha256": "2f8e9d320c5688fd4f7ec9bdd676273134e4c9c176767f1aa396d17f2144b0c2"
+    },
+    {
+      "frame": 144000,
+      "pixel_identical": false,
+      "reference_png_sha256": "e22b90a4e450cdbd42444c34e0f6270d4d84c8c1466149cf82b0656aa934ac5b",
+      "target_png_sha256": "c8a475198d2d02913f1b3c5b42224d6ff6ae7021831446ca0f5914747ddc3c1a"
+    },
+    {
+      "frame": 144600,
+      "pixel_identical": false,
+      "reference_png_sha256": "d10adc6415abfc7db932b4d6a54f42bfa434641bd86a591e2c01a002fdec7332",
+      "target_png_sha256": "74c7e37d43889f6ce57d871a798f47ff9961fd04dc684009e9461956917d9591"
+    },
+    {
+      "frame": 145200,
+      "pixel_identical": false,
+      "reference_png_sha256": "b7a77a150107faec3b90826f9de3dd1b1f7ea5bded5e3584a0b2555d208154ce",
+      "target_png_sha256": "c665d8a0e4fadbe5936e4bcd8866e5da2d72b4ae476f75446d1af6ce53a816e2"
+    },
+    {
+      "frame": 145800,
+      "pixel_identical": false,
+      "reference_png_sha256": "3a31fd2511aae3f5e4470123dd80994f229eff4b9915c7657e2099c4b97ebf49",
+      "target_png_sha256": "b05d6688c84821ba7c5b995dbb8b438d54888990966cf3528018103f415d931f"
+    },
+    {
+      "frame": 146400,
+      "pixel_identical": false,
+      "reference_png_sha256": "6da8fb8e2f9f13941a2b18cc58d99db556ccf3bc1cdbffa7a574dd3f399eb3e2",
+      "target_png_sha256": "237dfbf3a58ae7de2bd6d74d6032eed2b6995b46b28b229fae99298e6183d7c7"
+    },
+    {
+      "frame": 147000,
+      "pixel_identical": false,
+      "reference_png_sha256": "7a9aa50070bb7bbabaedd394affd03f6d515259e11bd858565a0a0dd82e92500",
+      "target_png_sha256": "7a7772702a555388af8ba8dfee1229317bdfa3bd5e504279f0f0033688b4cf04"
+    },
+    {
+      "frame": 147600,
+      "pixel_identical": false,
+      "reference_png_sha256": "31815df400f68e1088db26dc8306f449ce2bccec291dc1823971b771ea7fa1b9",
+      "target_png_sha256": "4c9cdbf0543dc126b90df410cbc6aea4615308e55793ec52b77d05441a606f09"
+    },
+    {
+      "frame": 148200,
+      "pixel_identical": false,
+      "reference_png_sha256": "96cfabd414a980814cc6560218a77810670637467aede32210f6888ab923b495",
+      "target_png_sha256": "aadb54c452828b369ad9cc38cf476daa9141ac1143766b9fd0e30c8091b0df53"
+    },
+    {
+      "frame": 148800,
+      "pixel_identical": false,
+      "reference_png_sha256": "89780e6cb5b49e8ea460064f76f1d3034871b28515e8431e1f8e45915fe82d01",
+      "target_png_sha256": "f31e77cd0c8d756a6c9e170347e7979e0032b573a93101dd0d342bfcd364077b"
+    },
+    {
+      "frame": 149400,
+      "pixel_identical": false,
+      "reference_png_sha256": "5fe1e9bc02bee614beb92f0401764523882da1e7519230b36688c5e62853ef93",
+      "target_png_sha256": "1e043c55c71a50dafc06716f1da69994fc4f937fedbd5732b8ff4747cd771ec0"
+    },
+    {
+      "frame": 150000,
+      "pixel_identical": false,
+      "reference_png_sha256": "a35d2a01298676904a13ed8e4df6f38a37fc995b4db5d915929f47bfb965bf2c",
+      "target_png_sha256": "abde8d501cd81d294b75ef348d65d588b00e663dc4b6345d35fa064664384806"
+    },
+    {
+      "frame": 150600,
+      "pixel_identical": false,
+      "reference_png_sha256": "71aaf80e5f87e7f15cb998ad9b8627c403b3962b2e871561e478b8c217043826",
+      "target_png_sha256": "0a73e4557b04ae498f63f345b1ff1c4fd487aabd1299ece8be8bddb1de8f10e7"
+    },
+    {
+      "frame": 151200,
+      "pixel_identical": false,
+      "reference_png_sha256": "aed6b30d98ee1673552b70265b7fe59a73e267bc723149697f137e0750674332",
+      "target_png_sha256": "85bcd07544bcfa4af8630436c85d64341d7ee12724da85bf92a263bb559e5afc"
+    },
+    {
+      "frame": 151800,
+      "pixel_identical": false,
+      "reference_png_sha256": "ffcbc35f409c229ddfaf666641bf17d2683e8e34ceb6c7ef0b0c3b7c91792b69",
+      "target_png_sha256": "7c0cf5d0a6c199dd276d20e554a53cf8783c66a1d7ed7ad1b7c4f7cb7157dd90"
+    },
+    {
+      "frame": 152400,
+      "pixel_identical": false,
+      "reference_png_sha256": "790a2cfcef23e5c31f210ab30b4956356bfe22c42133a232ba2364558d25123e",
+      "target_png_sha256": "3379de0f06e47635c760ece579aabdbf7514ea35e71aaf93f1e2ca242dc336a5"
+    },
+    {
+      "frame": 153000,
+      "pixel_identical": false,
+      "reference_png_sha256": "1fcbdbf2a182d7c4eedb5b5c8e8faecc394d494d948e8ef52240f9a593a7afab",
+      "target_png_sha256": "b79b4027ec2c65eb00fa34716618323be9c0563cd3824b8783d625d8a3a9a252"
+    },
+    {
+      "frame": 153600,
+      "pixel_identical": false,
+      "reference_png_sha256": "ffcbc35f409c229ddfaf666641bf17d2683e8e34ceb6c7ef0b0c3b7c91792b69",
+      "target_png_sha256": "e1c770f77a733503184cc62bc18b83dab92b549e8a9fc6d075c194c6fd919df9"
+    },
+    {
+      "frame": 154200,
+      "pixel_identical": false,
+      "reference_png_sha256": "43211e67d7fcbceed8d4bd2d2867551d6a915d7bf9576c6f5500e93fe1ea9256",
+      "target_png_sha256": "af0c4ce47a18d43091418f6c7804f3bfa67e9742ca872009575283e3710fa9a1"
+    },
+    {
+      "frame": 154800,
+      "pixel_identical": false,
+      "reference_png_sha256": "de617f4b7458acf738adbd631c249e94194b16ccc7ae299af7b45795a8ed9cd3",
+      "target_png_sha256": "51b4d9608c6432e9f3316b0c70763964d655f240c64650d0a3dc3fbde53542d5"
+    }
+  ],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true,
+  "length_fnv_pairs_absent_from_reference_segment": 1463,
+  "reference_scope_note": "Reference covers only original continuation 141936\u2013154943; target covers reset\u2013168591. Pair absence from this shorter original segment does not imply a decode error or full original coverage. Independent per-key checks cover every target tuple.",
+  "visual_scope_note": "22 shared absolute frame PNGs all differ; absolute frames are not aligned between these scopes. Scene validation uses individually inspected captures, not frame equivalence."
+}

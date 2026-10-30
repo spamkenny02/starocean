@@ -1,0 +1,16 @@
+[
+  {
+    "route": "route_oct30_departure_original.json",
+    "sha256": "56798954a8dde494bd3b68881e17b16f79bf54734fe5828fb3a45bb82ef90afd",
+    "rom_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+    "end_frame": 154943,
+    "replay_scope": "executed prefix plus replayed continuation from 141936"
+  },
+  {
+    "route": "route_oct30_departure_target.json",
+    "sha256": "cef15f31ff06c3f836f98648c315273319c2d44c5d5ffda2a83484525eb4a867",
+    "rom_sha256": "9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963",
+    "end_frame": 168591,
+    "replay_scope": "full reset replay"
+  }
+]

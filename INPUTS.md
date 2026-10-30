@@ -35,7 +35,7 @@ python analysis/validate_catalog.py
 python analysis/make_bps_prototype.py --target FR_extended_experimental.sfc --output Star_Ocean_FR_extended_EXPERIMENTAL.bps
 ```
 
-SHA256 cible élargie courante : `eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0`. Le SHA256 faa3735e… reste historique. Le SHA256 f1586e… cité dans les anciens bilans reste historique.
+SHA256 cible élargie courante : `9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963`. La cible eda13e6d… est historique ; ses états ne peuvent pas être chargés dans cette nouvelle ROM. Le SHA256 faa3735e… reste historique. Le SHA256 f1586e… cité dans les anciens bilans reste historique.
 
 Les outils `match_french_streams.py`, `align_pointer_contexts.py` et `merge_catalogs.py` servent à enrichir le catalogue à partir des données privées et des traces. Un bloc seulement déduit doit rester distinct d’un bloc exécuté. Les fichiers `route_menus.json` et `extended_callsites.json` figent les entrées et sites vérifiés pour ce jalon.
 
@@ -131,3 +131,10 @@ Le validateur original exige le SHA exact, vérifie indépendamment chaque empre
 `route_oct30_party_original.json` et `route_oct30_party_target.json` prolongent les routes précédentes jusqu'aux menus de Clatos après les scènes de Cool. `oct30_party_routes_manifest.json` fixe leurs SHA de ROM, empreintes de route et bornes. Les nouvelles continuations sont réellement rejouées ; les compositions finales entières n'ont pas été rejouées d'un seul tenant depuis le reset.
 
 Le relevé original publié de ce segment est `oct30_maltos_observed.json.gz`, exporté depuis `fr_oct30_original_party` (131 767–141 936), puis validé indépendamment. Les replays alternatifs ne doivent pas être additionnés. Les compteurs de trace diffèrent entre certaines exécutions malgré des PNG finaux identiques ; le bilan garde explicitement cette limite. La reconstruction après promotion de neuf preuves produit les mêmes octets de ROM et de BPS que le jalon précédent.
+
+
+## Départ de Clatos et combat du 30 octobre
+
+`route_oct30_departure_target.json` a été rejouée depuis le reset sur la cible 9a2126ff… jusqu'à 168 591 images, en franchissant le précédent arrêt FA:E65D. Ne charger aucun état de eda13e6d… ou de l'essai intermédiaire 0b939cef… dans cette ROM. `route_oct30_departure_original.json` compose le préfixe historique et la continuation 141 936–154 943 rejouée sur l'original ; l'ensemble original n'a pas fait un nouveau replay depuis zéro.
+
+Le relevé retenu `oct30_departure_observed.json.gz` contient uniquement les 1 073 observations détaillées et leurs compteurs, provenant de la relecture originale. Les rapports conservent l'échec ancien, la confirmation indépendante, les deux nouvelles clés et les limites de timing. `oct30_departure_final_validation.json` compare un segment original à la cible depuis le reset : les paires d'empreintes absentes du segment court restent comptées séparément, tout en passant la validation indépendante par clé. Aucun rapprochement visuel par frame absolue n'est revendiqué pour ces périmètres décalés.
