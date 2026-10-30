@@ -124,3 +124,10 @@ python analysis/validate_original_trace.py analysis/runs/fr_oct29_tablet/sdd1.cs
 ```
 
 Le validateur original exige le SHA exact, vérifie indépendamment chaque empreinte source/longueur et refuse les conflits physiques. Il ne certifie pas la progression visuelle. `run_headless.py` écrit désormais `start_frame` pour distinguer un lancement depuis le reset d'une continuation. Le champ des anciens relevés de cette reprise a été complété depuis les commandes connues ; les états restent privés et ne sont pas des sauvegardes SRAM.
+
+
+## Scène de Maltos et équipe Ratix–Milly
+
+`route_oct30_party_original.json` et `route_oct30_party_target.json` prolongent les routes précédentes jusqu'aux menus de Clatos après les scènes de Cool. `oct30_party_routes_manifest.json` fixe leurs SHA de ROM, empreintes de route et bornes. Les nouvelles continuations sont réellement rejouées ; les compositions finales entières n'ont pas été rejouées d'un seul tenant depuis le reset.
+
+Le relevé original publié de ce segment est `oct30_maltos_observed.json.gz`, exporté depuis `fr_oct30_original_party` (131 767–141 936), puis validé indépendamment. Les replays alternatifs ne doivent pas être additionnés. Les compteurs de trace diffèrent entre certaines exécutions malgré des PNG finaux identiques ; le bilan garde explicitement cette limite. La reconstruction après promotion de neuf preuves produit les mêmes octets de ROM et de BPS que le jalon précédent.

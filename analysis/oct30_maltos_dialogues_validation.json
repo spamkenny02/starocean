@@ -1,0 +1,513 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "frames": 157001,
+  "reference_frames": 141936,
+  "reference_start_frame": 131767,
+  "target_start_frame": 137892,
+  "reference_transfers": 7528,
+  "reference_unique_cpu_sources": 448,
+  "reference_callsites": [
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c2fe89",
+    "c2fea7",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "ca0bf5",
+    "ca6364",
+    "ca639a",
+    "ca63dd",
+    "ca640e",
+    "ca643f",
+    "ca64b0",
+    "ca64f1",
+    "ca6522",
+    "ca6736",
+    "ca6767"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30588,
+  "catalog_observed_addresses": 2352,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28228,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 13462,
+  "minimum_redirected_required": 10000,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 493,
+  "unknown_transfer_hash_pairs": [
+    {
+      "length": 32,
+      "fnv32": "2da0d105",
+      "count": 50
+    },
+    {
+      "length": 32,
+      "fnv32": "88a4d8be",
+      "count": 50
+    },
+    {
+      "length": 32,
+      "fnv32": "8b9b45c5",
+      "count": 50
+    },
+    {
+      "length": 32,
+      "fnv32": "9eb70d7f",
+      "count": 50
+    },
+    {
+      "length": 64,
+      "fnv32": "0bd18c16",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "0c2a0d09",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "0daba413",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "1482ed24",
+      "count": 14
+    },
+    {
+      "length": 64,
+      "fnv32": "1efc0e5f",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "206a5fdd",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "20eff90b",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "2c0b15ad",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "2fcbcc37",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "3191c36f",
+      "count": 50
+    },
+    {
+      "length": 64,
+      "fnv32": "31cbdfe1",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "3eeca91d",
+      "count": 49
+    },
+    {
+      "length": 64,
+      "fnv32": "40015fac",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "4b43fa17",
+      "count": 14
+    },
+    {
+      "length": 64,
+      "fnv32": "5304536b",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "552dddfc",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "579bcabd",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "579ee35d",
+      "count": 40
+    },
+    {
+      "length": 64,
+      "fnv32": "58cc89a9",
+      "count": 14
+    },
+    {
+      "length": 64,
+      "fnv32": "5bdcba9b",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "5c6fd546",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "60e89a41",
+      "count": 8
+    },
+    {
+      "length": 64,
+      "fnv32": "6368f517",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "6437275d",
+      "count": 15
+    },
+    {
+      "length": 64,
+      "fnv32": "65d98719",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "6ab08d2e",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "6d2c57dc",
+      "count": 33
+    },
+    {
+      "length": 64,
+      "fnv32": "6f7be3ef",
+      "count": 14
+    },
+    {
+      "length": 64,
+      "fnv32": "70fbceb8",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "7289550a",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "73857bb5",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "73aa7452",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "7dbd226e",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "803cffe5",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "84ee28a8",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "89f1be21",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "8a1cc75f",
+      "count": 33
+    },
+    {
+      "length": 64,
+      "fnv32": "8ade97b2",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "8d155af2",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "8d656b51",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "8f2e4252",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "92b49c83",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "9471a1f2",
+      "count": 50
+    },
+    {
+      "length": 64,
+      "fnv32": "96623422",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "9b44fc8d",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "9db4554a",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "a12095cb",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "a13dffe3",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "a6e6dfd9",
+      "count": 50
+    },
+    {
+      "length": 64,
+      "fnv32": "a7a2fe42",
+      "count": 49
+    },
+    {
+      "length": 64,
+      "fnv32": "ae072e95",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "af090dd4",
+      "count": 40
+    },
+    {
+      "length": 64,
+      "fnv32": "bac26837",
+      "count": 17
+    },
+    {
+      "length": 64,
+      "fnv32": "bf3176f9",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "c66324e0",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "c8539816",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "cd4b43d3",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "d0ee1706",
+      "count": 16
+    },
+    {
+      "length": 64,
+      "fnv32": "d321944d",
+      "count": 50
+    },
+    {
+      "length": 64,
+      "fnv32": "d52835b9",
+      "count": 16
+    },
+    {
+      "length": 64,
+      "fnv32": "db204e37",
+      "count": 26
+    },
+    {
+      "length": 64,
+      "fnv32": "dbd53b07",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "dd00990f",
+      "count": 22
+    },
+    {
+      "length": 64,
+      "fnv32": "de1b2445",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "e5d974d8",
+      "count": 22
+    },
+    {
+      "length": 64,
+      "fnv32": "e631b4ba",
+      "count": 47
+    },
+    {
+      "length": 64,
+      "fnv32": "e8155772",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "ea7d2800",
+      "count": 19
+    },
+    {
+      "length": 64,
+      "fnv32": "f0bf1692",
+      "count": 4
+    },
+    {
+      "length": 64,
+      "fnv32": "f10f402b",
+      "count": 5
+    },
+    {
+      "length": 64,
+      "fnv32": "f34b5d35",
+      "count": 40
+    },
+    {
+      "length": 64,
+      "fnv32": "f46bd34a",
+      "count": 21
+    },
+    {
+      "length": 64,
+      "fnv32": "f54bb303",
+      "count": 40
+    },
+    {
+      "length": 64,
+      "fnv32": "f74175c9",
+      "count": 26
+    },
+    {
+      "length": 64,
+      "fnv32": "fc7e3ee4",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "ff232b43",
+      "count": 15
+    }
+  ],
+  "target_unique_cpu_sources": 509,
+  "target_source_length_hash_checks": 509,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 33,
+  "image_comparisons": [
+    {
+      "frame": 138000,
+      "pixel_identical": false,
+      "reference_png_sha256": "9512015588d17159b52aabc8cee58b3883ad452bf4e53315b73430b4cf094ab6",
+      "target_png_sha256": "f370637624307f091dcb0856a26ec3154ae551138ef6b8d3dc7d6fa7ec9ff58b"
+    },
+    {
+      "frame": 138600,
+      "pixel_identical": false,
+      "reference_png_sha256": "5d3b020522dc3de4621d2f5282314389cde4a327e2efaf4008b594addee80ddd",
+      "target_png_sha256": "606083aba9190ad5f4c8f1cf4314221829e8b77fc725c05c8bf12ab5a85b5981"
+    },
+    {
+      "frame": 139200,
+      "pixel_identical": false,
+      "reference_png_sha256": "af0c4ce47a18d43091418f6c7804f3bfa67e9742ca872009575283e3710fa9a1",
+      "target_png_sha256": "1c45c8b6f7ae4c388fb205e311b4f1ea759783e1935657ffaa39adc8d0e5386c"
+    },
+    {
+      "frame": 139800,
+      "pixel_identical": false,
+      "reference_png_sha256": "d9147d81011b51648ec81885fc41a637889844f9d8daff0491b931f7f103a21a",
+      "target_png_sha256": "b9a8b84f39f712e182281f8694a6dacfc2ca7bde77892d3ce22354fd7df8a668"
+    },
+    {
+      "frame": 140400,
+      "pixel_identical": false,
+      "reference_png_sha256": "77b61e76d6798752335e65c93c9fafbe1fff8bcbe0e355ca65b5a11caa46beeb",
+      "target_png_sha256": "947f8d0081c76e304ae1a97c3bf331ab9db09428245ca40c97c35dca6e24f844"
+    },
+    {
+      "frame": 141000,
+      "pixel_identical": false,
+      "reference_png_sha256": "28ae7ab8307ee6c134d03d0fd918bf510d940121836326d3a551290083525e72",
+      "target_png_sha256": "55f6ef014e67580bee837fe4d7d2a85c81a5fa40b96f0ef9180993509aecdb12"
+    },
+    {
+      "frame": 141600,
+      "pixel_identical": true,
+      "reference_png_sha256": "ffcbc35f409c229ddfaf666641bf17d2683e8e34ceb6c7ef0b0c3b7c91792b69",
+      "target_png_sha256": "ffcbc35f409c229ddfaf666641bf17d2683e8e34ceb6c7ef0b0c3b7c91792b69"
+    }
+  ],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true
+}

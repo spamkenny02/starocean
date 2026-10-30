@@ -1,8 +1,8 @@
 {
   "scope": "Public metadata consistency only; no ROM, decompression or new gameplay validation",
   "catalog_keys": 30588,
-  "catalog_observed_keys": 2343,
-  "observed_keys_with_public_records": 2328,
+  "catalog_observed_keys": 2352,
+  "observed_keys_with_public_records": 2337,
   "observed_keys_without_public_records": [
     {
       "cpu_key": "E2:1C92",
@@ -66,11 +66,11 @@
     }
   ],
   "catalog_priority_counts": {
-    "1": 8405,
-    "2": 8525,
-    "3": 11307,
+    "1": 8404,
+    "2": 8521,
+    "3": 11303,
     "9": 8,
-    "10": 2343
+    "10": 2352
   },
   "lookup_slots": 30588,
   "max_lookup_probe_distance": 211,
@@ -133,6 +133,12 @@
       "sha256": "e514ccbb77fefa5eb4afeae650be1e27d89604c14baf841be21401dd6906eaaa",
       "records": 1339,
       "unique_keys": 1325
+    },
+    {
+      "file": "oct30_maltos_observed.json.gz",
+      "sha256": "c42d9c427f655329c75497028bab074f289585916e0a60265c5f7a107ee7642d",
+      "records": 461,
+      "unique_keys": 448
     }
   ],
   "consistency_checks_passed": true,

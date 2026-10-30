@@ -1,0 +1,188 @@
+{
+  "before_keys": 30588,
+  "after_keys": 30588,
+  "before_observed": 2343,
+  "after_observed": 2352,
+  "changes": [
+    {
+      "key": "EB3C99",
+      "before": {
+        "cpu_bank": 235,
+        "cpu_address": 15513,
+        "source_file": 2833561,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 235,
+        "cpu_address": 15513,
+        "source_file": 2833561,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "EB3CD6",
+      "before": {
+        "cpu_bank": 235,
+        "cpu_address": 15574,
+        "source_file": 2833622,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 235,
+        "cpu_address": 15574,
+        "source_file": 2833622,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "ED18FD",
+      "before": {
+        "cpu_bank": 237,
+        "cpu_address": 6397,
+        "source_file": 2955517,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 237,
+        "cpu_address": 6397,
+        "source_file": 2955517,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "ED1932",
+      "before": {
+        "cpu_bank": 237,
+        "cpu_address": 6450,
+        "source_file": 2955570,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 237,
+        "cpu_address": 6450,
+        "source_file": 2955570,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7EADA",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 60122,
+        "source_file": 3664602,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 60122,
+        "source_file": 3664602,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "F7EAF3",
+      "before": {
+        "cpu_bank": 247,
+        "cpu_address": 60147,
+        "source_file": 3664627,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 247,
+        "cpu_address": 60147,
+        "source_file": 3664627,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB4D11",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 19729,
+        "source_file": 3886353,
+        "length": 64,
+        "method": "structural correspondence",
+        "priority": 2
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 19729,
+        "source_file": 3886353,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB4D1D",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 19741,
+        "source_file": 3886365,
+        "length": 64,
+        "method": "derived second 64-byte DMA from structured nine-byte table run",
+        "priority": 3
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 19741,
+        "source_file": 3886365,
+        "length": 64,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    },
+    {
+      "key": "FB7375",
+      "before": {
+        "cpu_bank": 251,
+        "cpu_address": 29557,
+        "source_file": 3896181,
+        "length": 32,
+        "method": "byte-identical English 32/64-byte tile",
+        "priority": 1
+      },
+      "after": {
+        "cpu_bank": 251,
+        "cpu_address": 29557,
+        "source_file": 3896181,
+        "length": 32,
+        "method": "observed fr_oct30_original_party",
+        "priority": 10
+      }
+    }
+  ],
+  "new_keys": 0,
+  "length_extensions": 0,
+  "physical_source_conflicts": [],
+  "incremental_merge_idempotent": true,
+  "before_target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "after_target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "target_bytes_unchanged": true,
+  "lookup_slots_bytes_unchanged": true,
+  "bps_matches_published_gzip": true
+}

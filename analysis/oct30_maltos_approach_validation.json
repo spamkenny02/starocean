@@ -1,0 +1,82 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "frames": 135204,
+  "reference_frames": 131767,
+  "reference_start_frame": 112908,
+  "target_start_frame": 129651,
+  "reference_transfers": 8461,
+  "reference_unique_cpu_sources": 916,
+  "reference_callsites": [
+    "c023ba",
+    "c023eb",
+    "c02e25",
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30588,
+  "catalog_observed_addresses": 2343,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28237,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 4949,
+  "minimum_redirected_required": 1,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 163,
+  "unknown_transfer_hash_pairs": [],
+  "target_unique_cpu_sources": 166,
+  "target_source_length_hash_checks": 166,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 10,
+  "image_comparisons": [
+    {
+      "frame": 130200,
+      "pixel_identical": false,
+      "reference_png_sha256": "ccec9d93c289d9e5edcc594a37bce21cc84b6d90ce14510600b437f6e3842262",
+      "target_png_sha256": "f4c8a0ddfdcb077a2eeacee6938a9ae1f8a8c03ad62680d05f7498ff3604873b"
+    },
+    {
+      "frame": 130800,
+      "pixel_identical": false,
+      "reference_png_sha256": "edf0fb26147d99a965d490bade57271ffdbc127e2e040be8d8512a2c60ae958d",
+      "target_png_sha256": "852c39ade198c3bb8a1533b1209687f724cfb0dfd7357ac0392be8f714de88ac"
+    },
+    {
+      "frame": 131400,
+      "pixel_identical": false,
+      "reference_png_sha256": "dc36ea09c89f1be9ddc1a2bbe88c1f28ab360a41505a1a31cfbaf9c58022fa04",
+      "target_png_sha256": "33f3f67f45ec8aff800f2ae629d871c1980d7817ab2de8aa325567e6018d05e4"
+    }
+  ],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true
+}

@@ -1,0 +1,144 @@
+{
+  "status": "experimental; incomplete game coverage",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "frames": 137892,
+  "reference_frames": 131767,
+  "reference_start_frame": 112908,
+  "target_start_frame": 135204,
+  "reference_transfers": 8461,
+  "reference_unique_cpu_sources": 916,
+  "reference_callsites": [
+    "c023ba",
+    "c023eb",
+    "c02e25",
+    "c20dcb",
+    "c20e0a",
+    "c20e49",
+    "c281c8",
+    "c391c4",
+    "c3922c",
+    "c3924a",
+    "c3993b",
+    "c39957",
+    "c60aa4",
+    "c60aff",
+    "c60b57",
+    "c60de1",
+    "c60e31"
+  ],
+  "reference_channels": [
+    0
+  ],
+  "catalog_addresses": 30588,
+  "catalog_observed_addresses": 2343,
+  "catalog_requested_only_addresses": 8,
+  "catalog_other_inferred_addresses": 28237,
+  "missing_sources": 0,
+  "insufficient_catalog_lengths": 0,
+  "wrong_physical_sources": 0,
+  "redirected_transfers": 2726,
+  "minimum_redirected_required": 1000,
+  "target_handler_pcs": [
+    "648077"
+  ],
+  "distinct_redirected_length_fnv32_pairs": 353,
+  "unknown_transfer_hash_pairs": [
+    {
+      "length": 64,
+      "fnv32": "0400f149",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "1021688a",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "1c0800e7",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "3183366c",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "702fc11f",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "8c3589fb",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "9dd01fbd",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "a76f77c7",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "a7b82390",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "ad95a089",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "b920cb45",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "b956527f",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "be53afb9",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "ced0cf19",
+      "count": 1
+    },
+    {
+      "length": 64,
+      "fnv32": "de7508a9",
+      "count": 2
+    },
+    {
+      "length": 64,
+      "fnv32": "f5ba127e",
+      "count": 1
+    }
+  ],
+  "target_unique_cpu_sources": 359,
+  "target_source_length_hash_checks": 359,
+  "target_decompression_errors": [],
+  "handler_trap_samples": 0,
+  "trap_dma_sources": [],
+  "target_remaining_sdd1_transfers": 0,
+  "all_sampled_sdd1_flags_false": true,
+  "sdd1_samples": 33,
+  "image_comparisons": [],
+  "caveats": [
+    "Hash set membership does not establish order or universal visual correctness.",
+    "Sparse captures are not a complete frame-by-frame comparison.",
+    "No cartridge save/load validation; emulator states are separate."
+  ],
+  "persistent_unresolved_dma_sources": [],
+  "dma_checks_passed": true
+}

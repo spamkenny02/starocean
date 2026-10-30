@@ -1,0 +1,20 @@
+{
+  "input_format": "Absolute [start,end,libretro mask] intervals; use run_headless.py intro inputs before frame 24000.",
+  "full_compositions_rerun_in_one_process": false,
+  "routes": [
+    {
+      "file": "route_oct30_party_original.json",
+      "rom_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "route_sha256": "62f038ab5d242ee87acd66851f1d02218f5ae0860bbd1fa609f41e0c22beaf3d",
+      "intervals": 1737,
+      "end_frame": 141936
+    },
+    {
+      "file": "route_oct30_party_target.json",
+      "rom_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+      "route_sha256": "a95001cafe6ef3ea18957eacf92f5b8759a3ffe4fb16bdd5b712707153a53ae6",
+      "intervals": 2010,
+      "end_frame": 157001
+    }
+  ]
+}

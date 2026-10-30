@@ -1,0 +1,38 @@
+{
+  "input_format": "Absolute [start, end, libretro mask] intervals. Before frame 24000 use run_headless.py automatic intro controls.",
+  "full_compositions_rerun_in_one_process": false,
+  "routes": [
+    {
+      "file": "route_oct29_cool_original.json",
+      "sha256": "f4e0caad3737f0e7813e875355ab22753dd857f8a9fb36f67a51438076fa0ecf",
+      "rom_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "intervals": 1652,
+      "end_frame": 131767,
+      "scope": "Executed original primary segments; scene with Dorn/Milly outside Cool still in progress."
+    },
+    {
+      "file": "route_oct29_river_original.json",
+      "sha256": "96059f142c1d3884e04277ec2b50b7f94cb58c4c8585128758698106580514b5",
+      "rom_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+      "intervals": 1557,
+      "end_frame": 118050,
+      "scope": "Separate optional river-east branch; not the primary route to Cool."
+    },
+    {
+      "file": "route_oct29_cool_target.json",
+      "sha256": "a4599438c5b3f1ce781e19f510310c674647a54e6d73897b6bd772c9b4403f5e",
+      "rom_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+      "intervals": 1745,
+      "end_frame": 129651,
+      "scope": "Reset prefix plus executed same-SHA continuations to the Village Cool title."
+    },
+    {
+      "file": "route_oct29_target_missing.json",
+      "sha256": "8e24b146ab8abbf400cac64d2f6749d793edeb68860faccec21ddb184605d038",
+      "rom_sha256": "faa3735e12320fc700f85ce86abda2f638bb8aa583cf6c3315d3b4822807bd32",
+      "intervals": 1515,
+      "end_frame": 121567,
+      "scope": "Historical failed route; missing CF:8A5D at the northern map transition."
+    }
+  ]
+}

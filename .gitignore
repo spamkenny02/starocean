@@ -28,3 +28,7 @@ analysis/aligned_pointer_contexts.json
 
 # Temporary copies of private ROM images
 analysis/.*.sfc.*
+
+# Public route metadata (ROM hashes and input intervals only)
+!analysis/oct30_routes_manifest.json
+!analysis/oct30_party_routes_manifest.json

@@ -1,3 +1,18 @@
+# Reprise prioritaire — Maltos terminé, équipe Ratix–Milly à Clatos
+
+Dernier jalon du 30 octobre : les deux ROMs ont couvert Maltos/Milly à Cool, les échanges de Dorn/Milly, le retour à Clatos et l'équipe Ratix–Milly au menu. Metox et Calnus ne sont pas encore atteints. Cette section remplace les points de reprise historiques ci-dessous.
+
+- Original conseillé : `analysis/runs/fr_oct30_original_party/end.state`, **141 936**, SHA256 `a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd`. Menu ouvert à Clatos, Ratix et Milly. Le nouveau segment a été rejoué et sa capture finale correspond au premier passage. Route complète : `analysis/route_oct30_party_original.json`.
+- Cible conseillée : `analysis/runs/fr_oct30_target_dialogues_recheck/end.state`, **157 001**, SHA256 `eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0`. Même scène, menu Ratix–Milly. Contrelecture de la scène effectuée après reconstruction byte-identique, 14 445 transferts et 533 tuples contrôlés. Route complète : `analysis/route_oct30_party_target.json`.
+
+Prochaine action : fermer le menu avec B=1 pendant cinq images, relâcher et attendre au moins 120 images pour laisser finir le fondu, puis naviguer vers la sortie nord et Metox sur chaque ROM. Les tentatives interactives à gauche du perron de la maison n'ont pas résolu ce trajet : ne pas les traiter comme un nouveau jalon ni reprendre leur état comme point prioritaire. Les routes courantes s'arrêtent au menu, avant ces tentatives. Le plan public de Clatos peut aider, mais toute route doit être réellement rejouée.
+
+Catalogue : 30 588 clés, 2 352 observées (+9 promotions, aucune nouvelle clé ni longueur), zéro nouveau PC, DMA0 seulement. La ROM et le BPS gardent le SHA cible eda13e6d… ; ne jamais charger un état de l'original ou de faa3735e… dans cette cible. Bilans : `oct30_party_scenario_coverage.json`, `oct30_party_original_validation.json`, `oct30_maltos_recheck_validation.json`, `oct30_party_merge_validation.json` et `oct30_party_bps_validation.json`.
+
+En cas de perte des états, reconstruire depuis les routes publiques avec les SHA exacts. Ces états instantanés ne valident aucune sauvegarde/lecture SRAM. L'objectif complet reste inachevé et la date visée du 29 octobre à 22 h Paris est dépassée.
+
+---
+
 # Point de reprise courant — 30 octobre 2026
 
 Les fichiers privés sont actuellement présents. Les sections plus bas décrivent l'historique et des points parfois perdus ; cette section fait foi pour la reprise courante.

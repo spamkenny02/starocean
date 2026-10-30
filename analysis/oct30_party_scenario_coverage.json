@@ -1,0 +1,96 @@
+{
+  "status": "experimental; incomplete scenario",
+  "catalog_keys": 30588,
+  "catalog_observed": 2352,
+  "new_keys": 0,
+  "newly_observed_previously_inferred_keys": 9,
+  "new_observed_pcs": 0,
+  "listed_observed_pcs": 72,
+  "static_hook_replacements": 110,
+  "exercised_channels": [
+    0
+  ],
+  "target_sha256": "eda13e6d09f0783e6854d552a1a62e4a460ae7c32b00143d9dbb1aec2ccc0aa0",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "original_start_frame": 131767,
+  "original_end_frame": 141936,
+  "target_recheck_start_frame": 137892,
+  "target_recheck_end_frame": 157001,
+  "original_scene": "Cool exterior Dorn/Milly dialogues, transition back to Clatos, Ratix/Milly party menu.",
+  "target_scene": "Arrival of Milly, Maltos house dialogues, Dorn/Milly exterior dialogues, return to Clatos and Ratix/Milly party menu.",
+  "original_scene_captures": [
+    {
+      "label": "fr_oct30_original_story",
+      "frame": 136667,
+      "png_sha256": "4b626eb2e6115e4da33fc3a3590d238442b316b057f692e3b629f158c0479746"
+    },
+    {
+      "label": "fr_oct30_original_story",
+      "frame": 138627,
+      "png_sha256": "e3eff8d64cdbaa5673364243ee87e7f2725ce69c0fd445a8b18c296cf37337ff"
+    },
+    {
+      "label": "fr_oct30_original_story",
+      "frame": 141691,
+      "png_sha256": "af5dd58b83d9fadeaf0e42879cbea6c1321722e0076fe4cb48dce819e06fa719"
+    },
+    {
+      "label": "fr_oct30_original_party",
+      "frame": 141936,
+      "png_sha256": "5c2dd5db9cdd49b32533363b1f487d15d5f27154b670b65b6333a15504a12831"
+    }
+  ],
+  "target_scene_captures": [
+    {
+      "label": "fr_oct30_target_house",
+      "frame": 135622,
+      "png_sha256": "fb3409e35ddc52c0b2fc455969448930b56eee98cb7de9f259c8d045e616ca85"
+    },
+    {
+      "label": "fr_oct30_target_house",
+      "frame": 137350,
+      "png_sha256": "9717ad66b1ff8e7ccdd34edb40f63e39df47a2de2bf667f8549f5c208eb15c00"
+    },
+    {
+      "label": "fr_oct30_target_house",
+      "frame": 137892,
+      "png_sha256": "8df7167d18eb3999fb4a62f110bd3fef7f97b35151c21c194a4aa7bd4732f22d"
+    },
+    {
+      "label": "fr_oct30_target_dialogues_recheck",
+      "frame": 142800,
+      "png_sha256": "c02e6b23c3c8cd5acfc51ddc20fdaa8b10e79bcc1c0e5c1bdd40d14d3ddd39b2"
+    },
+    {
+      "label": "fr_oct30_target_dialogues_recheck",
+      "frame": 148800,
+      "png_sha256": "f31e77cd0c8d756a6c9e170347e7979e0032b573a93101dd0d342bfcd364077b"
+    },
+    {
+      "label": "fr_oct30_target_dialogues_recheck",
+      "frame": 153600,
+      "png_sha256": "e1c770f77a733503184cc62bc18b83dab92b549e8a9fc6d075c194c6fd919df9"
+    },
+    {
+      "label": "fr_oct30_target_dialogues_recheck",
+      "frame": 157001,
+      "png_sha256": "d01abac4d523ad47a9a5f6ab5cf69e904a6f0597b8d86b584f05ade747854696"
+    }
+  ],
+  "source_replay_menu_png_identical": true,
+  "target_recheck_menu_png_identical": true,
+  "recorded_transfer_counts": {
+    "initial_original_interactive_131767_to_142517": 5360,
+    "retained_original_replay_131767_to_141936": 7528,
+    "first_target_dialogues_137892_to_157001": 13462,
+    "retained_target_recheck_137892_to_157001": 14445
+  },
+  "target_recheck_distinct_key_length_fnv32_checks": 533,
+  "target_recheck_dma_checks_passed": true,
+  "caveats": [
+    "The trace counts differ between executions despite identical final menu PNGs. The cause is not established; no deterministic transfer-count or complete frame-by-frame equivalence claim.",
+    "The retained reference is the independently validated original replay, not the initial interactive journal. Counts from alternative replays are not added.",
+    "Composed full routes have not been replayed again as one uninterrupted reset run. Their new continuation segments have been replayed.",
+    "No cartridge SRAM save/load, DMA1 in game, real hardware, Metox or Calnus validation."
+  ]
+}
