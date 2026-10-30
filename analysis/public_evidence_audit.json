@@ -1,8 +1,8 @@
 {
   "scope": "Public metadata consistency only; no ROM, decompression or new gameplay validation",
-  "catalog_keys": 30590,
-  "catalog_observed_keys": 2488,
-  "observed_keys_with_public_records": 2473,
+  "catalog_keys": 30595,
+  "catalog_observed_keys": 2664,
+  "observed_keys_with_public_records": 2653,
   "observed_keys_without_public_records": [
     {
       "cpu_key": "E2:1C92",
@@ -21,14 +21,6 @@
       "historical_provenance": "observed fr_live"
     },
     {
-      "cpu_key": "F3:E121",
-      "historical_provenance": "observed fr_live"
-    },
-    {
-      "cpu_key": "F3:E146",
-      "historical_provenance": "observed fr_live"
-    },
-    {
       "cpu_key": "F4:E5B7",
       "historical_provenance": "observed fr_live"
     },
@@ -37,19 +29,11 @@
       "historical_provenance": "observed fr_live"
     },
     {
-      "cpu_key": "F7:28AD",
-      "historical_provenance": "observed fr_live"
-    },
-    {
       "cpu_key": "F8:33BD",
       "historical_provenance": "observed fr_live"
     },
     {
       "cpu_key": "F9:AC7D",
-      "historical_provenance": "observed fr_live"
-    },
-    {
-      "cpu_key": "F9:F897",
       "historical_provenance": "observed fr_live"
     },
     {
@@ -66,13 +50,13 @@
     }
   ],
   "catalog_priority_counts": {
-    "1": 8353,
-    "2": 8488,
-    "3": 11253,
+    "1": 8325,
+    "2": 8411,
+    "3": 11187,
     "9": 8,
-    "10": 2488
+    "10": 2664
   },
-  "lookup_slots": 30590,
+  "lookup_slots": 30595,
   "max_lookup_probe_distance": 211,
   "exported_callsite_count": 69,
   "listed_callsite_count": 73,
@@ -145,6 +129,12 @@
       "sha256": "e004596f9789f76fb9d7ce4eadc983c48ecab39e2ee2510199d5f5134f47544c",
       "records": 1073,
       "unique_keys": 1025
+    },
+    {
+      "file": "metox_observed.json.gz",
+      "sha256": "8370e9f00d7c5e76eb570120d272c211bbbeebd83f7e1ffd2faf3bf4a8679494",
+      "records": 1687,
+      "unique_keys": 1651
     }
   ],
   "consistency_checks_passed": true,

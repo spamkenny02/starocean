@@ -109,5 +109,11 @@
     "Reconstruct prior checkpoint using versioned routes, then repeat navigation to Metox; do not fabricate lost route or PNG hashes",
     "No SRAM save/load, DMA1 gameplay, real hardware or full scenario validation",
     "No universal frame/transfer determinism claimed"
-  ]
+  ],
+  "fresh_public_audit_after_recovery": {
+    "scope": "metadata only; no ROM, emulator, decompression or BPS rebuild available after loss",
+    "checks_passed": true,
+    "observed_keys_with_public_records": 2653,
+    "historical_observed_without_details": 11
+  }
 }
