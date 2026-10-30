@@ -1,0 +1,113 @@
+{
+  "scope": "Summary recovered from completed tool results after the workspace and full reports were lost; exact new routes, captures and private states were not preserved.",
+  "source_sha256": "a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd",
+  "target_sha256": "576137287cf58e55365964b4ea03679ca7e1d01497fa2b5c3d1279ccd6c31ee9",
+  "scene": "Cool revisited, northwest exit, Nord: Mont Metox sign, rocky mountain entrance and introductory Dorn/Milly/Ratix dialogue completed on original and final target. Mountain worm fights, summit and Calnus unvalidated.",
+  "original": {
+    "ranges": [
+      [
+        154943,
+        160930
+      ],
+      [
+        160930,
+        182063
+      ]
+    ],
+    "transfers": 27966,
+    "unique_records": 1687,
+    "independent_checks": 1651,
+    "trace_sha256": "7235715960000f4233caf510c71f92749567767d214e1b979096e031e5b37ef4",
+    "decompression_errors": [],
+    "physical_source_conflicts": [],
+    "checks_passed": true
+  },
+  "target": {
+    "range": [
+      0,
+      194260
+    ],
+    "redirected_transfers": 194153,
+    "independent_key_length_fnv_checks": 2550,
+    "decompression_errors": [],
+    "handler_trap_samples": 0,
+    "persistent_unresolved_dma_sources": [],
+    "sdd1_samples": 324,
+    "all_sampled_sdd1_flags_false": true,
+    "remaining_sdd1_transfers": 0,
+    "dma_checks_passed": true
+  },
+  "catalog": {
+    "keys": 30595,
+    "observed": 2664,
+    "requested_only": 8,
+    "other_inferred": 27923,
+    "added_keys": [
+      "d6c9d3",
+      "e853ff",
+      "e85dd3",
+      "e8ae98",
+      "e8cde8"
+    ],
+    "promoted_existing": 171,
+    "length_extensions": [
+      {
+        "key": "dad346",
+        "old": 64,
+        "new": 16384
+      },
+      {
+        "key": "fb7d3c",
+        "old": 64,
+        "new": 1024
+      },
+      {
+        "key": "fb7d47",
+        "old": 64,
+        "new": 1024
+      },
+      {
+        "key": "fb7d52",
+        "old": 64,
+        "new": 1024
+      },
+      {
+        "key": "fb7d5d",
+        "old": 64,
+        "new": 1024
+      }
+    ],
+    "reconstruction_bytes": 2824878,
+    "streams_verified": 30595,
+    "max_lookup_probe_distance": 211,
+    "merge_idempotent": true,
+    "observed_pcs": 73,
+    "new_observed_pcs": [],
+    "static_hooks": 110,
+    "gameplay_channels": [
+      0
+    ]
+  },
+  "patch": {
+    "round_trip_byte_equal": true,
+    "three_crcs_verified": true,
+    "gzip_git_blob_sha": "d5cd6a71bf0a1369a297033364d5b1591b2620f9"
+  },
+  "old_target_failure": {
+    "sha256": "9a2126ffa611115849ea8b32cf1a5ed43806aa2c83398a5bd5b88c4f004e8963",
+    "trap_key": "d6c9d3",
+    "length": 24576,
+    "trap_pc": "648096",
+    "mismatching_key": "dad346",
+    "mismatching_length": 16384,
+    "expected_fnv32": "4ea7f0e3",
+    "actual_fnv32": "00797ce7"
+  },
+  "limits": [
+    "New exact input routes, full comparison JSON, PNGs and states lost before publication",
+    "Original deduplicated evidence, final catalog, lookup slots and BPS were uploaded before loss and are retained",
+    "Reconstruct prior checkpoint using versioned routes, then repeat navigation to Metox; do not fabricate lost route or PNG hashes",
+    "No SRAM save/load, DMA1 gameplay, real hardware or full scenario validation",
+    "No universal frame/transfer determinism claimed"
+  ]
+}

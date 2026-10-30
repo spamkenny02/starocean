@@ -1,3 +1,17 @@
+# Reprise prioritaire — Metox atteint, nouveaux états et routes perdus
+
+La nouvelle cible 57613728… a réellement terminé un replay depuis le reset à 194 260 images : 194 153 transferts / 2 550 tuples contrôlés, sans arrêt ni S-DD1. Les deux ROMs ont rejoint l’entrée rocheuse de Metox et terminé le dialogue introductif Dorn/Milly/Ratix. Combats de vers, sommet et Calnus restent à valider.
+
+**Le workspace a été réinitialisé après ces tests. La ROM, le cœur, les états privés à 182 063 (original) et 194 260 (cible), les nouvelles routes exactes et captures sont actuellement absents.** Ne pas essayer de charger les chemins historiques ci-dessous. Le catalogue final, les observations originales dédupliquées, le lookup et le BPS ont pu être sauvegardés sur GitHub ; les résultats sont résumés honnêtement dans `analysis/metox_validation_recovered.json`.
+
+Prochaine action : rétablir seulement la pièce jointe autorisée `upload/Star Ocean FR.smc` (6 291 456 octets, SHA256 a31a931a7fb66f2d3486af8d3bda261ea9aa2e40e47a6120cd87f368d332c3dd), reconstruire le cœur et la cible, exécuter validate_catalog.py et le round-trip BPS. Les dernières routes exactes publiques restent `analysis/route_oct30_departure_original.json` et `analysis/route_oct30_departure_target.json` du commit b49d5f6. Elles reconstruisent le point précédent, pas l’ascension jusqu’à Metox ; elles devront être rejouées et la navigation refaite. Ne jamais inventer les segments perdus ni utiliser un état d’un autre SHA.
+
+Trajet résolu avant perte : revenir à Cool, traverser le village vers la partie est, emprunter les escaliers vers la rive supérieure puis le pont nord-ouest ; sortir au nord, lire « Nord: Mont Metox », suivre les marches jusqu’au décor rocheux. Le guide https://shrines.rpgclassics.com/snes/so1/walk1.shtml donne l’orientation, pas la preuve. Des recherches de touches depuis les états ont été rejouées normalement, sans écrire dans la RAM. Dans ces cartes, 0x6806/0x6808 suivaient l’acteur contrôlé ; l’ancien 0x6a46/0x6a48 ne convenait pas. Ne pas supposer ces offsets fiables en combat/transition.
+
+Catalogue 30 595 clés / 2 664 observées : cinq ajouts, cinq extensions de longueur, 171 promotions, zéro nouveau PC. Cible actuelle **576137287cf58e55365964b4ea03679ca7e1d01497fa2b5c3d1279ccd6c31ee9**, 73 PC observés, 110 hooks, DMA0 seulement. L’ancien arrêt D6:C9D3 et l’erreur d’empreinte DA:D346 sont corrigés. Les états d’émulateur ne valident pas la SRAM. Scénario complet inachevé ; blocage courant par absence de l’entrée privée.
+
+---
+
 # Reprise prioritaire — sortie de Clatos, combat corrigé
 
 Le 30 octobre, les deux versions ont couvert le dialogue de départ avec Dorn/Milly et la sortie nord de Clatos. Le combat suivant est franchi sur la nouvelle cible depuis le reset. **Metox et Calnus restent à atteindre.** Cette section remplace les reprises historiques plus bas.
